@@ -383,10 +383,17 @@ header {
 
 .contact {
     position: relative;
-    background-color: $orange;
+    background-color: $dark-blue;
     overflow: hidden;
-    padding-bottom: 20px;
+    padding-bottom: 5%;
     font-size: 2rem;
+    text-transform: uppercase;
+    text-align: justify;
+   
+    
+    .title {
+        color: white;
+    }
 
     &__form, &__form-top {
         display: flex;
@@ -410,9 +417,10 @@ header {
 
     &__form-btn {
         align-self: flex-start;
-        padding: 1em;
+        padding: .5em;
         width: 100%;
         max-width: 300px;
+        font-size: 2rem;
         color: $dark-blue;
         border: none;
         border-radius: 8px;
@@ -431,19 +439,52 @@ header {
             color: white;
         
             &--one {
-                width: 70%;
+                width: 65%;
+                border-right: $orange solid 2px;
+                .contact-data-first {
+                    margin-right: 2%;
+                }
+                .contact-data-first, .contact-data-sec {
+                    display: inline-block;
+                    width: 46%;
+
+                    label, input {
+                        display: block;
+                        width: 100%;
+                    }
+                }
             }
 
             &--two {
-             width: 30%;
+             width: 35%;
+             padding-left: 2%;
 
-                .test-div {
-                    width: 100%;
+             .contact-info {
+                 padding-top: 5%;
+               
+                padding-left: 5%;
+                line-height: 3rem;
+                font-size: 1.7rem;
+                
+                .email {
+                    text-transform: none;
+                    line-height: 100px;
                 }
+               
+                i {
+                    padding: 5% 10% 0 10%;
+                    
+                    font-size: 3rem;
+                    
+                }
+
+            }
             }
            
         }
     }
+
+    
 }
 //END OF CONTACT
 

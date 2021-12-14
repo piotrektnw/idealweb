@@ -551,10 +551,16 @@ header .fa-chevron-down {
 
 .contact {
   position: relative;
-  background-color: #FCA311;
+  background-color: #14213D;
   overflow: hidden;
-  padding-bottom: 20px;
+  padding-bottom: 5%;
   font-size: 2rem;
+  text-transform: uppercase;
+  text-align: justify;
+}
+
+.contact .title {
+  color: white;
 }
 
 .contact__form, .contact__form-top {
@@ -595,9 +601,10 @@ header .fa-chevron-down {
 .contact__form-btn {
   -ms-flex-item-align: start;
       align-self: flex-start;
-  padding: 1em;
+  padding: .5em;
   width: 100%;
   max-width: 300px;
+  font-size: 2rem;
   color: #14213D;
   border: none;
   border-radius: 8px;
@@ -624,15 +631,44 @@ header .fa-chevron-down {
 }
 
 .contact .contact-ul__item--one {
-  width: 70%;
+  width: 65%;
+  border-right: #FCA311 solid 2px;
+}
+
+.contact .contact-ul__item--one .contact-data-first {
+  margin-right: 2%;
+}
+
+.contact .contact-ul__item--one .contact-data-first, .contact .contact-ul__item--one .contact-data-sec {
+  display: inline-block;
+  width: 46%;
+}
+
+.contact .contact-ul__item--one .contact-data-first label, .contact .contact-ul__item--one .contact-data-first input, .contact .contact-ul__item--one .contact-data-sec label, .contact .contact-ul__item--one .contact-data-sec input {
+  display: block;
+  width: 100%;
 }
 
 .contact .contact-ul__item--two {
-  width: 30%;
+  width: 35%;
+  padding-left: 2%;
 }
 
-.contact .contact-ul__item--two .test-div {
-  width: 100%;
+.contact .contact-ul__item--two .contact-info {
+  padding-top: 5%;
+  padding-left: 5%;
+  line-height: 3rem;
+  font-size: 1.7rem;
+}
+
+.contact .contact-ul__item--two .contact-info .email {
+  text-transform: none;
+  line-height: 100px;
+}
+
+.contact .contact-ul__item--two .contact-info i {
+  padding: 5% 10% 0 10%;
+  font-size: 3rem;
 }
 
 .footer {

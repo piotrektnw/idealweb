@@ -7,13 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/6489b00fcf.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/6489b00fcf.js" crossorigin="anonymous"></script>
     <!-- Fade in animation for section 'timeline' -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- End of sources for 'timeline' animation -->
     <link rel="stylesheet" href="./css/main.css">
-    <title>Idealweb.pl - dobre strony internetowe</title>
+    <title>IDEALWEB.PL | DOBRE STRONY INTERNETOWE</title>
     <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
 </head>
 <!-- 
@@ -400,20 +401,27 @@ Think of what could be included here:
 
         <section id="contact" class="contact bright-section">
 
-            <h2 class="title">test test </h2>
+            <h2 class="title"><span class="highlight">Napisz</span> do nas!</h2>
             <div class="wrapper">
                 <!-- <section class="footer section" id="footer"> -->
 
                 <ul class="contact-ul">
-                   
+
                     <li class="contact-ul__item contact-ul__item--one">
                         <form class="contact__form">
                             <div class="contact__form-top">
-                                <label for="name" class="contact__form-label">Imię: </label>
+                                <label for="name" class="contact__form-label">Twoje imię: </label>
                                 <input type="text" class="contact__form-input" id="name">
-
-                                <label for="email" class="contact__form-label">Adres email: </label>
-                                <input type="text" class="contact__form-input" id="email">
+                                <div class="contact-data">
+                                    <div class="contact-data-first">
+                                        <label for="email" class="contact__form-label">Adres email: </label>
+                                        <input type="text" class="contact__form-input" id="email">
+                                    </div>
+                                    <div class="contact-data-sec">
+                                        <label for="phone" class="contact__form-label">Telefon kontaktowy: </label>
+                                        <input type="text" class="contact__form-input" id="phone">
+                                    </div>
+                                </div>
                             </div>
 
                             <label for="msg" class="contact__form-label">Wiadomość: </label>
@@ -423,7 +431,16 @@ Think of what could be included here:
                         </form>
                     </li>
                     <li class="contact-ul__item contact-ul__item--two">
-                        <div class="test-div">dd</div>
+                        <div class="contact-info">
+                            <p class="detailed-info">
+                                Chcesz stworzyć stronę internetową dla swojego biznesu? Zastanawiasz się jakie korzyści
+                                przyniesie Ci profesjonalna strona internetowa? Zadzwoń lub napisz do nas! Chętnie
+                                odpowiemy na wszystkie Twoje pytania oraz opowiemy o
+                                <!-- TUTAJ DODAĆ TREŚĆ O NAJWYŻSZYCH STANDARDACH -->
+                            </p>
+                            <p class="email"> <i class="far fa-envelope"></i> biuro [@] idealweb.pl </p>
+                            <p> <i class="fas fa-phone-alt"></i> +48 664 063 929 </p>
+                        </div>
                     </li>
                 </ul>
                 <!-- </section> -->
