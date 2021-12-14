@@ -22,13 +22,13 @@ body {
     font-size: 4rem;
     color: $dark-blue;
     // text-shadow: #abc;
-    padding: 30px;
+    padding: 20px;
     text-align: center;
     text-transform: uppercase;
 }
 
 .highlight {
-    color: $dark-blue;
+    color: $orange;
 }
 
 .add-padding {
@@ -78,7 +78,7 @@ body {
         text-decoration: none;
         font-size: 2rem; 
         padding: 0 3rem;
-        color: $medium-blue;
+        color: $orange;
         transition: .3s font-size, .3s color;
     }
 
@@ -87,7 +87,7 @@ body {
     }
 
     .nav-link:hover {
-        color: $dark;
+        color: $orange;
         font-size: 2.2rem;
         font-weight: bold;
 }
@@ -111,12 +111,12 @@ header {
     }
     color: $pure-white;
     text-transform: uppercase;
-
+    
     .hero-img {
         position: relative;
-        height: 100vh;
+        height: 80vh;
         width: 100vw;
-        background-image: url('../img/hero-bg.jpg');
+        background-image: url('../img/business_sm.jpg');
         background-position: bottom;
         background-size: cover;
         background-attachment: fixed;
@@ -139,7 +139,7 @@ header {
         }
 
         span {
-            color: $light-blue;
+            color: $orange;
         }
     }
 
@@ -159,7 +159,7 @@ header {
 // SKILLS
 
 .skills {
-    background-color: $medium-blue;
+    background-color: $grey;
     padding-bottom: 30px;
 
     .title {
@@ -234,7 +234,7 @@ header {
         display: flex;
         position: fixed;
         top: 0;
-        background-color: $medium-blue;
+        background-color: $grey;
         min-height: 100%;
         width: 100%;
         transform: translateX(100%);
@@ -246,7 +246,7 @@ header {
         .highlight {
             font-weight: bold;
             color: $pure-white;
-            background-color: $dark-blue;
+            background-color: $grey;
         }
 
         a {
@@ -257,7 +257,7 @@ header {
         }
 
         a:hover {
-            color: $dark;
+            color: $grey;
         }
 
         .first,
@@ -318,153 +318,141 @@ header {
 
 // END OF SKILLS
 
-//START OF TIMELINE - EDUCATION AND EXPERIENCE
+//START OF $WHY-US
 
-.timeline {
-    padding: 20px 0 50px 0;
+.why-us {
+    padding: 10px 20px;
 
     .wrapper {
-        max-width: 1024px;
         width: 90%;
-        margin: 0 auto;
+        max-width: 1024px;
     }
 
-    .style-list ul li:first-child, 
-    .style-list ul li:nth-child(2) {
-    list-style: none;
-    } 
-
-    .university ul li {
-        list-style: none;
+    &__box {
+        height: 300px;
+        display: flex;
+        align-items: start;
+        flex-wrap: wrap;
+        overflow: hidden;
+        margin: 20px 0;
+        background-color: yellow;
+  
+    &-img {
+        height: 300px;
+        display: inline-block;
+        min-width: 300px;
+        background-image: url('../img/sq.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
     }
 
-    .kajware ul li:first-child {
-        list-style: none;
+    &-text {
+            flex-basis: 300px;
+            flex-grow: 1;
+            display: inline-block;
+            height: 100%;
+            min-width: 300px;
+            text-align: center;
+
+            .card-title {
+                margin: 2rem 4rem;
+                font-size: 3rem;
+            }
+
+            .card-text {
+                margin: 2rem 4rem;
+                font-size: 2rem;
+            }
+            }
+        }
+
+        .reverted {
+            .why-us__box-img {
+                order: 2;
+            }
+            .why-us__box-text {
+                order: 1;
+            }
+        }
     }
 
-    .timeline-item {
-        padding: 4em 1em 2em 2em;
-        position: relative;
-        font-size: 2em;
-        color: rgba(black, .7);
-        border-left: 2px solid $border-color;
-        text-align: justify;
-        
-        h1 {
-            color: $dark-blue;
-        }
-
-        .highlight {
-            margin-top: 1em;
-            font-size: 1em;
-            font-weight: bold;
-        }
-
-        li {
-            padding-top: 1em;
-        }
-        
-        &::before {
-            content: attr(date-is);
-            color: $dark-blue;
-            position: absolute;
-            left: 2em;
-            font-weight: bold;
-            top: 2em;
-            display: block;
-            font-weight: 700;
-            font-size: 1em;
-        }
-    
-        &::after {
-            width: 20px;
-            height: 20px;
-            display: block;
-            top: 2em;
-            position: absolute;
-            left: -11px;
-            border-radius: 10px;
-            content: '';
-            border: 2px solid $border-color;
-            background: $pure-white;
-        }
-       
-    }
-}
 //END OF TIMELINE - EDUCATION AND EXPERIENCE
 
 // CONTACT
 
-
 .contact {
     position: relative;
-    width: 100%;
+    background-color: $orange;
+    overflow: hidden;
+    padding-bottom: 20px;
     font-size: 2rem;
-    background-image: url('../img/statement-bg.jpg');
-    background-position: 0 20%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: $pure-white;
-    transition: .5s padding cubic-bezier(0.65, 0.05, 0.36, 1);
 
-    .contact-bg {
-        position: absolute;
+    &__form, &__form-top {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__form-label {
+        margin-bottom: 0.5em;
+        text-transform: uppercase; 
+    }
+
+    &__form-input {
+        @include contactForm;
+    }
+
+    &__form-textarea {
+        @include contactForm;
+        max-width: 95%;
+        min-height: 150px;
+    }
+
+    &__form-btn {
+        align-self: flex-start;
+        padding: 1em;
         width: 100%;
-        height: 100%;
-        background-color: white;
-        opacity: 1;
-        transition: .5s opacity cubic-bezier(0.65, 0.05, 0.36, 1);
-    }
-    
-    p, h2 {
-        padding: 10px 0;
+        max-width: 300px;
+        color: $dark-blue;
+        border: none;
+        border-radius: 8px;
+        background-color: $pure-white;
+        cursor: pointer;
     }
 
-    .message {
-        position: relative;
+    .contact-ul {
+        display: flex;
+        align-items: start;
+        justify-content: space-evenly;
+        list-style: none;
         width: 100%;
-        background-color: rgba(0,0,0, .8);
-        padding: 5px 30px 30px 30px;
-        overflow: hidden;
-       height: 65px;
-        transition: .5s height cubic-bezier(0.65, 0.05, 0.36, 1), .5s width cubic-bezier(0.65, 0.05, 0.36, 1);
-        text-align: justify;
 
-        .read-message {
-            display: inline-block;
-            width: 93%;
-            padding-bottom: 20px;
-            font-size: 3rem;
-            text-align: center;
-            text-transform: uppercase;
-            cursor: pointer;
+        &__item {
+            color: white;
+        
+            &--one {
+                width: 70%;
+            }
+
+            &--two {
+             width: 30%;
+
+                .test-div {
+                    width: 100%;
+                }
+            }
+           
         }
-
-        .contact-chevron {
-            width: 5%;
-            font-size: 3rem;
-            text-align: right;
-            cursor: pointer;
-        }
-    }
-    
-    .show-pic {
-        opacity: 0
-    }
-
-    .show-msg {
-        height: 700px;
-        width: 50%;
-       
     }
 }
-
 //END OF CONTACT
+
+
 
 //FOOTER
 .footer {
     width: 100%;
-    background-color: $medium-blue;
+    background-color: $grey;
 
     .footer-ul {
         display: flex;
@@ -533,7 +521,7 @@ header {
                         }
 
                         i:hover {
-                            color: $dark;
+                            color: $pure-white;
                             cursor: pointer;
                         }
                     }
@@ -564,7 +552,7 @@ header {
                     }
 
                     a:hover {
-                            color: $dark;
+                            color: yellow;
                             font-size: 2.2rem;
                             font-weight: bold;
                     }
@@ -615,6 +603,45 @@ header {
       opacity: 1;
     }
   }
+
+  /* ----------------------------------------------
+ * Generated by Animista on 2021-12-12 19:27:58
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation slide-in-right
+ * ----------------------------------------
+ */
+@-webkit-keyframes slide-in-right {
+    0% {
+      -webkit-transform: translateX(1000px);
+              transform: translateX(1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slide-in-right {
+    0% {
+      -webkit-transform: translateX(1000px);
+              transform: translateX(1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+//   End of animista animations
 
 @keyframes chevron-animation {
     0% {

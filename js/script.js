@@ -9,11 +9,6 @@ const sections = document.querySelectorAll('.section');
 const allNavLinks = document.querySelectorAll('.nav-link');
 const devDescription = document.querySelector('.dev-description');
 const selectA = document.querySelector('.select-a');
-const message = document.querySelector('.message');
-const readMessage = document.querySelector('.read-message');
-const contactChevron = document.querySelector('.contact-chevron')
-const contactBg = document.querySelector('.contact-bg')
-const contact = document.querySelector('.contact')
 
 const hideNav = () => {
     nav.classList.remove('show-menu')
@@ -77,19 +72,13 @@ let i = 0;
 
 function updateDevDescription() {
 
-    let adjectives = ['curious', 'growing', 'determined', 'focused', 'your future']
+    let adjectives = ['zarabiają', 'zwiększają ruch', 'interesują', 'przyciągają']
 
-    // Remove select-a span textContent only if you 'a' is not needed
-    // selectA.textContent = ""
+    
 
     setTimeout(function () {
         devDescription.textContent = adjectives[i];
         i++;
-
-        // Prepare select-a span textContent removal 
-        // if (i === 3 ) {
-        //     selectA.textContent = ""
-        // }   
 
         if (i < adjectives.length) {
             updateDevDescription();
@@ -98,11 +87,7 @@ function updateDevDescription() {
     }, 600)
 }
 
-const showMessage = () => {
-    message.classList.toggle('show-msg');
-    contact.classList.toggle('add-padding');
-    contactBg.classList.toggle('show-pic')
-}
+
 
 details.addEventListener('click', hideDetails);
 menuBtn.addEventListener('click', handleNav);
@@ -115,6 +100,3 @@ allNavLinks.forEach(navLink => {
 setTimeout(() => {
     updateDevDescription();
 }, 2500);
-
-readMessage.addEventListener('click', showMessage)
-contactChevron.addEventListener('click', showMessage)

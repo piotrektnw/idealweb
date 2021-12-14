@@ -21,7 +21,7 @@
     height: 100%;
     text-transform: uppercase;
     z-index: 50;
-    background-color: $medium-blue;
+    background-color: $grey;
     color: $pure-white;
     font-weight: bold;
     opacity: .8;
@@ -37,4 +37,13 @@
 @mixin border-right {
     border-right: 1px black solid;
     
+}
+
+@mixin contactForm {
+    margin-bottom: 2em;
+    padding: 0.6em 1.2em;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.6rem;
+    width: 95%;
 }
