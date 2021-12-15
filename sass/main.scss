@@ -31,7 +31,7 @@ body {
     color: $orange;
 }
 
-.add-padding {
+.padding-bottom {
     padding: 30px;
 }
 
@@ -321,7 +321,7 @@ header {
 //START OF $WHY-US
 
 .why-us {
-    padding: 10px 20px;
+
 
     .wrapper {
         width: 90%;
@@ -334,7 +334,7 @@ header {
         align-items: start;
         flex-wrap: wrap;
         overflow: hidden;
-        margin: 20px 0;
+        margin-top: 20px ;
         background-color: yellow;
   
     &-img {
@@ -358,12 +358,12 @@ header {
             .card-title {
                 margin: 2rem 4rem;
                 font-size: 3rem;
-            }
+                }
 
             .card-text {
                 margin: 2rem 4rem;
                 font-size: 2rem;
-            }
+                }
             }
         }
 
@@ -385,14 +385,12 @@ header {
     position: relative;
     background-color: $dark-blue;
     overflow: hidden;
-    padding-bottom: 5%;
     font-size: 2rem;
     text-transform: uppercase;
     text-align: justify;
-   
     
     .title {
-        color: white;
+        color: $pure-white;
     }
 
     &__form, &__form-top {
@@ -441,6 +439,7 @@ header {
             &--one {
                 width: 65%;
                 border-right: $orange solid 2px;
+
                 .contact-data-first {
                     margin-right: 2%;
                 }
@@ -473,22 +472,14 @@ header {
                
                 i {
                     padding: 5% 10% 0 10%;
-                    
                     font-size: 3rem;
-                    
+                    }
                 }
-
             }
-            }
-           
         }
     }
-
-    
 }
 //END OF CONTACT
-
-
 
 //FOOTER
 .footer {

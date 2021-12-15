@@ -34,7 +34,7 @@ body {
   color: #FCA311;
 }
 
-.add-padding {
+.padding-bottom {
   padding: 30px;
 }
 
@@ -481,10 +481,6 @@ header .fa-chevron-down {
           transform: translateX(0%);
 }
 
-.why-us {
-  padding: 10px 20px;
-}
-
 .why-us .wrapper {
   width: 90%;
   max-width: 1024px;
@@ -501,7 +497,7 @@ header .fa-chevron-down {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   overflow: hidden;
-  margin: 20px 0;
+  margin-top: 20px;
   background-color: yellow;
 }
 
@@ -553,14 +549,13 @@ header .fa-chevron-down {
   position: relative;
   background-color: #14213D;
   overflow: hidden;
-  padding-bottom: 5%;
   font-size: 2rem;
   text-transform: uppercase;
   text-align: justify;
 }
 
 .contact .title {
-  color: white;
+  color: #FFF;
 }
 
 .contact__form, .contact__form-top {
