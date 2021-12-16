@@ -1,14 +1,29 @@
 const menuBtn = document.querySelector('.burger-btn');
 const nav = document.querySelector('.nav');
-const remove = document.querySelector('.nav-link');
-const allCards = document.querySelectorAll('.card-one, .card-two, .card-three, .card-four, .card-five, .card-six, .show-details');
-const hideButton = document.querySelector('.hide-button');
-const details = document.querySelector('.detailed-info');
 const date = document.querySelector('.date');
 const sections = document.querySelectorAll('.section');
 const allNavLinks = document.querySelectorAll('.nav-link');
 const devDescription = document.querySelector('.dev-description');
-const selectA = document.querySelector('.select-a');
+
+const showMoreInfo = document.querySelectorAll('.more-info-one, .more-info-two, .more-info-three')
+const allContents = document.querySelectorAll('.one, .two, .thr')
+const hiders = document.querySelectorAll('.hider')
+
+const hide = () => {
+    allContents.forEach(item => {
+        item.classList.remove('show')
+    })
+}
+
+const showContent = (e) => {
+    let text = e.target.textContent;
+    let toDisplay = "." + text.slice(0, 3);
+
+    let displayContent = document.querySelector(toDisplay);
+
+    displayContent.classList.add("show")
+}
+
 
 const hideNav = () => {
     nav.classList.remove('show-menu')
@@ -19,36 +34,6 @@ const handleNav = () => {
     nav.classList.toggle('show-menu')
     menuBtn.classList.toggle('change-burger')
 }
-
-const hideDetails = () => {
-    details.classList.remove('show-detailed-info')
-    let active = document.querySelector('.active')
-    // delay addition of display property, so content 
-    // does not dissapear at the same time as click on 
-    // button rolls back whole element
-    setTimeout(() => {
-        active.style.display = "none"
-    }, 400);
-    active.classList.remove('active');
-}
-
-const handleDetails = () => {
-    details.classList.toggle('show-detailed-info')
-}
-
-
-allCards.forEach(item => {
-
-    item.addEventListener('click', (e) => {
-
-        let clickedContent = e.target.textContent;
-        let preparedContent = clickedContent.slice(0, 5);
-        const itemToShow = document.querySelector(`.${preparedContent}`);
-        itemToShow.classList.add('active')
-        itemToShow.style.display = "flex"
-        handleDetails();
-    })
-})
 
 const handleNavBtn = () => {
     const currentSection = window.scrollY;
@@ -74,7 +59,7 @@ function updateDevDescription() {
 
     let adjectives = ['zarabiają', 'zwiększają ruch', 'interesują', 'przyciągają']
 
-    
+
 
     setTimeout(function () {
         devDescription.textContent = adjectives[i];
@@ -88,15 +73,29 @@ function updateDevDescription() {
 }
 
 
-
-details.addEventListener('click', hideDetails);
+//handle navbar functions
 menuBtn.addEventListener('click', handleNav);
-currentDate();
 window.addEventListener('scroll', handleNavBtn);
 allNavLinks.forEach(navLink => {
     navLink.addEventListener('click', hideNav)
 });
 
+
+//entrance animation
 setTimeout(() => {
     updateDevDescription();
 }, 2500);
+
+
+//handle why-us content
+showMoreInfo.forEach((button) => {
+    button.addEventListener('click', showContent)
+})
+
+hiders.forEach(item => {
+    item.addEventListener('click', hide)
+});
+
+
+// current year in footer 
+currentDate();
