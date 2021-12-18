@@ -5,7 +5,7 @@ const sections = document.querySelectorAll('.section');
 const allNavLinks = document.querySelectorAll('.nav-link');
 const devDescription = document.querySelector('.dev-description');
 
-const showMoreInfo = document.querySelectorAll('.more-info-one, .more-info-two, .more-info-three')
+const showMoreInfo = document.querySelectorAll('.more-info-one, .more-info-two, .more-info-three, .why-us__box')
 const allContents = document.querySelectorAll('.one, .two, .thr')
 const hiders = document.querySelectorAll('.hider')
 

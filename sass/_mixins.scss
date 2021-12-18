@@ -16,16 +16,13 @@
     transform: translateX(-100%);
     transition: .5s transform cubic-bezier(0.65, 0.05, 0.36, 1);
     cursor: pointer;
-    
-    span {
-        display: none;
-    }
 }
 
 
 @mixin show-details {
     position: fixed;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     top: 0;
@@ -35,6 +32,7 @@
     transition: .5s cubic-bezier(0.65, 0.05, 0.36, 1);
     transform: translateX(-100%);
     z-index: 50;
+    cursor: pointer;
 
 }
 
