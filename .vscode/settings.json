@@ -1,0 +1,4 @@
+{
+   "prettier.resolveGlobalModules": false,
+    "prettier.requireConfig": false
+}

@@ -19,13 +19,16 @@
 </head>
 <!-- 
 Think of what could be included here:
+- function offset in js not ready
+-maybe make i-containers always 100vh high?
+- prettier do ustawienia jest (nie działa na html i js a działa na scss)
  -->
 
 <body>
     <main>
-        <header id="home" class="section">
+        <header id="home" class="section dark-section">
             <!-- WRAPPER DOESNT WORK! -->
-            <div class="wrapper">
+             <div class="wrapper">
                 <button class="burger-btn fas fa-bars"></button>
             </div>
 
@@ -62,29 +65,71 @@ Think of what could be included here:
                 <div class="hider__img hider__img--one"></div>
                 <h2 class="hider__title">Precyzyjnie zaprojektowana strona internetowa</h2>
 
-                <ul class="hider__ul hider__ul--one">
-                    Proces tworzenia strony internetowej dzielimy na kilka bardzo
-                    istotnych etapów:
-                    <li>Rozmowa - kładziemy bardzo mocny nacisk na pełne zrozumienie Twoich oczekiwań. Wiemy, że
-                        zrozumienie potrzeb
-                        klienta jest kluczowe do zrealizowania idealnego projektu.
+                <ul class="hider__list hider__list--one">
+                    <li class="list-title"> Proces tworzenia strony internetowej dzielimy na kilka bardzo
+                        istotnych etapów:</li>
+                    <li>
+                        <div class="i-container">
+                            <i class="fas fa-comments"></i>
+                        </div>
+
+                        <p class="text-info"> Rozmowa - kładziemy ogromny mocny nacisk na pełne zrozumienie
+                            Twoich oczekiwań. Rozumiemy jak ważne jest
+                            zrozumienie potrzeb
+                            klienta do zrealizowania idealnego projektu.
+                        </p>
                     </li>
-                    <li>Badanie specyfiki branży - chcemy wiedzieć czego oczekują klienci w Twojej branży po to, by
-                        Twoja
-                        strona internetowa odpowiadała na jak największą ilość ich potrzeb.
+                    <li>
+                        <div class="i-container">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <p class="text-info">Badanie specyfiki branży - chcemy
+                            wiedzieć czego oczekują klienci
+                            na Twoim rynku po to, by
+                            Twoja
+                            strona internetowa odpowiadała na jak największą ilość ich potrzeb.
+                        </p>
                     </li>
-                    <li>Burza mózgów - mając solidny materiał do analizy, wyciągamy z niego to co najważniejsze,
-                        identyfikujemy potrzeby i
-                        przygotowujemy odpowiedzi na nie.
+
+                    <li>
+                        <div class="i-container">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <p class="text-info"> Burza mózgów - mając solidny materiał do analizy, wyciągamy z niego
+                            to co najważniejsze,
+                            identyfikujemy potrzeby i
+                            przygotowujemy odpowiedzi na nie.
+                        </p>
                     </li>
-                    <li>Szkic projektu - po trzech etapach zbierania i analizowania danych, przygotowujemy zarys Twojej
-                        nowej
-                        strony internetowej.
+                    <li>
+                        <div class="i-container">
+                            <i class="fas fa-pencil-ruler"></i>
+                        </div>
+                        <p class="text-info"> Szkic projektu - po trzech etapach zbierania i analizowania
+                            danych, przygotowujemy zarys Twojej
+                            nowej
+                            strony internetowej.
+                        </p>
                     </li>
-                    <li>Ostatnie szlify - po konsultacji z Tobą, wprowadzamy uzgodnione zmiany (lub nie - jeśli nasz
-                        projekt tak mocno przypadł Ci do gustu:))</li>
-                    <li>Piszemy kod - od tego momentu przelewamy projekt do edytora kodu, kodu gdzie zaczyna nabierać
-                        realnych barw i kształtów.</li>
+                    <li>
+                        <div class="i-container">
+                            <i class="fas fa-gem"></i>
+                        </div>
+                        <p class="text-info">
+                            Ostatnie szlify - po konsultacji z Tobą, wprowadzamy uzgodnione
+                            zmiany (lub nie - jeśli nasz
+                            projekt tak mocno przypadł Ci do gustu:))
+                        </p>
+                    </li>
+                    <li>
+                        <div class="i-container">
+                            <i class="fas fa-file-code"></i>
+                        </div>
+                        <p class="text-info">Piszemy kod - od tego momentu przelewamy projekt do edytora
+                            kodu, kodu gdzie zaczyna nabierać
+                            realnych barw i kształtów.
+                        </p>
+                    </li>
                 </ul>
             </div>
 
@@ -212,32 +257,76 @@ Think of what could be included here:
 
         <section class="offer" id="offer">
             <h2 class="title">Co<span class="highlight"> otrzymujesz</span> w zamówieniu? </h2>
-            <ul>
-                <li>Nowoczesną stronę internetową zbudowaną według szczegółowo przygotowanego projektu</li>
-                <li>Indywidualny projekt graficzny strony</li>
-                <!-- Poniżej lub w sekcji powyżej napisać o szybkości i lekkości strony - tym jak to ważne dla wyszukiwarek,
+            <div class="wrapper">
+
+                <ul>
+                    <li>
+                        <div data-aos="fade-up-right" class="offer__img offer__img--one"></div>
+                        <p class="offer__text offer__text--one"> Nowoczesną stronę internetową zbudowaną według
+                            szczegółowo przygotowanego projektu
+                        </p>
+                    </li>
+                    <li>
+                        <p class="offer__text offer__text--two">Indywidualny projekt graficzny strony </p>
+                        <div data-aos="fade-up-left" class="offer__img offer__img--two"></div>
+                    </li>
+                    <li>
+                        <div data-aos="fade-up-right" class="offer__img offer__img--three"></div>
+                        <p class="offer__text offer__text--three"> Stronę która będzie wysoko oceniana i pozycjonowana
+                            przez wyszukiwarki. <span class="highlight">O co chodzi?</span>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="offer__text offer__text--four"> Dbałość o łatwość obsługi przez użytkownika -
+                            stosujemy najlepsze praktyki UX & UI (User Experience oraz User Interface)
+                        </p>
+                        <div data-aos="fade-up-left" class="offer__img offer__img--four"></div>
+                    </li>
+                    <li>
+                        <div data-aos="fade-up-right" class="offer__img offer__img--five"></div>
+                        <p class="offer__text offer__text--five"> Responsywność oraz wersję na wyświetlacze w
+                            smartfonach <span class="highlight">Dlaczego to jest ważne?</span>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="offer__text offer__text--six"> Stronę zoptymalizowaną pod kątem SEO - wiemy jak ważne
+                            jest pozycjonowanie strony internetowej dla Twojego biznesu.<span class="highlight"> Jak to
+                                zrobimy?</span>
+                        </p>
+                        <div data-aos="fade-up-left" class="offer__img offer__img--six"></div>
+                    </li>
+                    <li>
+                        <div data-aos="fade-up-right" class="offer__img offer__img--seven"></div>
+                        <p class="offer__text offer__text--seven"> Dobry, bezpieczny i funkcjonalny hosting Twojej
+                            strony
+                        </p>
+                    </li>
+                    <li>
+                        <p class="offer__text offer__text--eight"> Rejestrację nowej domeny internetowej w bardzo dobrej
+                            cenie
+                        </p>
+                        <div data-aos="fade-up-left" class="offer__img offer__img--eight"></div>
+                    </li>
+                    <li>
+                        <div data-aos="fade-up-right" class="offer__img offer__img--nine"></div>
+                        <p class="offer__text offer__text--nine"> Kompleksowe wdrożenie - nie musisz martwić się o
+                            instalację na serwerze, hosting, podpięcie pod domenę i wiele innych - wszystko to robimy za
+                            Ciebie!
+                        </p>
+                    </li>
+
+                    <!-- Poniżej lub w sekcji powyżej napisać o szybkości i lekkości strony - tym jak to ważne dla wyszukiwarek,
                      o semantyce i jej znaczeniu, dobrych praktykach SEO, tagach pod SEO, warunkach wyszukiwarek itp itd. -->
-                <li>Stronę która będzie wysoko oceniana i pozycjonowana przez wyszukiwarki. <span class="highlight">O co
-                        chodzi?</span></li>
-                <!-- Może tutaj wyjeżdżające liczniki z informacjami na temat ważności czasu ładowania strony itd -->
-                <li>Dbałość o łatwość obsługi przez użytkownika - stosujemy najlepsze praktyki UX & UI (User Experience
-                    oraz User Interface)</li>
-                <li>Responsywność oraz wersję na wyświetlacze w smartfonach <span class="highlight">Dlaczego to
-                        ważne?</span></li>
-                <!-- DO WDROŻENIA  -->
-                <!-- <li>Kod strony dostosowany do wysokich standardów <span class="highlight">accessibility</span> </li> -->
-                <li>Stronę zoptymalizowaną pod kątem SEO - wiemy jak ważne jest pozycjonowanie strony internetowej dla
-                    Twojego biznesu.<span class="highlight"> Jak to zrobimy?</span></li>
-                <li>Dobry i funkcjonalny hosting Twojej strony</li>
-                <li>Rejestrację nowej domeny internetowej w bardzo dobrej cenie!</li>
-                <li>Kompleksowe wdrożenie - nie musisz martwić się o instalację na serwerze, hosting, podpięcie pod
-                    domenę i wiele innych - wszystko to robimy za Ciebie!</li>
-                <!-- Do wdrożenia gdy CMS będzie w opcji -->
-                <!-- <li>Darmowe szkolenie z obsługi strony</li> -->
-            </ul>
+                    <!-- Może tutaj wyjeżdżające liczniki z informacjami na temat ważności czasu ładowania strony itd -->
+                    <!-- DO WDROŻENIA  -->
+                    <!-- <li>Kod strony dostosowany do wysokich standardów <span class="highlight">accessibility</span> </li> -->
+                    <!-- Do wdrożenia gdy CMS będzie w opcji -->
+                    <!-- <li>Darmowe szkolenie z obsługi strony</li> -->
+                </ul>
+            </div>
         </section>
 
-        <section id="contact" class="contact bright-section padding-bottom">
+        <section id="contact" class="contact dark-section padding-bottom">
 
             <h2 class="title"><span class="highlight">Napisz</span> do nas!</h2>
             <div class="wrapper">
@@ -281,7 +370,7 @@ Think of what could be included here:
         </section>
 
 
-        <section class="footer section" id="footer">
+        <section class="footer section dark-section" id="footer">
             <div class="wrapper">
                 <ul class="footer-ul">
                     <li class="footer-ul__item footer-ul__item--one">
@@ -329,7 +418,8 @@ Think of what could be included here:
     <script>
         AOS.init({
             duration: 1000,
-            offset: 150
+            offset: 250,
+            once: true
         });
     </script>
     <!-- End of animations for 'timeline' section  -->
