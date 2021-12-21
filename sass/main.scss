@@ -164,6 +164,7 @@ header {
 //START OF WHY-US
 
 .why-us {
+  background-color: $grey;
   .wrapper {
     width: 90%;
     max-width: 1024px;
@@ -176,7 +177,6 @@ header {
     flex-wrap: wrap;
     overflow: hidden;
     margin-top: 20px;
-    background-color: yellow;
     cursor: pointer;
 
     &-img {
@@ -225,13 +225,29 @@ header {
       text-align: center;
 
       .card-title {
+        color: $dark-blue;
         margin: 2rem 4rem;
         font-size: 3rem;
       }
 
       .card-text {
+        color: $dark-blue;
+        text-align: justify;
         margin: 2rem 4rem;
         font-size: 2rem;
+
+        &__more {
+          text-align: right;
+          transition: .3s color, .3s font-size;
+          .fas {
+            font-size: 1.6rem;
+          }
+        }
+
+        &__more:hover {
+          color: $orange;
+         font-size: 2.1rem;
+        }
       }
     }
   }
@@ -240,78 +256,55 @@ header {
   .two,
   .thr {
     @include show-details;
-  }
-
-  .hider {
-    background-color: blue;
-    flex-wrap: wrap;
-
-    &__img {
-      position: absolute;
-      top: 5%;
-      width: 80%;
-      height: 10%;
-      background-size: cover;
-      background-repeat: no-repeat;
-
-      &--one {
-        background-image: url("../img/business_sm.jpg");
-      }
-
-      &--two {
-        background-image: url("../img/social_big.png");
-      }
-
-      &--thr {
-        background-image: url("../img/sq.jpg");
-      }
-    }
-
-    &__title {
-      font-size: 2.8rem;
-      text-align: center;
-      padding-top: 2rem;
-    }
+    justify-content: center;
 
     &__list {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
       width: 80%;
-      display: block;
-      font-size: 2rem;
+      height: 90%;
+      color: $pure-white;
       list-style: none;
-
-      .list-title {
-        // text-align: center;
-        font-size: 2.8rem;
-        width: 100%;
-      }
 
       li > * {
         vertical-align: middle;
         line-height: normal;
       }
 
-      li {
-        width: 100%;
-        margin: 10px;
-        text-align: justify;
-        background-color: red;
+      li:first-child {
+        text-align: center;
+        font-size: 2.8rem;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+    }
 
-        .i-container {
-          display: inline-block;
-          margin: 0 2%;
-          width: 5%;
-          background-color: yellow;
+    li {
+      margin: 10px;
+      text-align: justify;
+      width: 100%;
 
-          .fas {
-            font-size: 4rem;
-          }
+      .highlight {
+        font-weight: bold;
+      }
+
+      .i-container {
+        display: inline-block;
+        text-align: center;
+        margin: 0 2%;
+        width: 5%;
+
+        .fas {
+          font-size: 4rem;
         }
+      }
 
-        .text-info {
-          width: 89%;
-          display: inline-block;
-          font-size: 2rem;
-        }
+      .text-info {
+        width: 89%;
+        display: inline-block;
+        font-size: 2rem;
       }
     }
   }
@@ -712,6 +705,16 @@ header {
   }
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes text-info__more-animation {
+  0% {
+    background-position-x: left 100%;
+  }
+
+  100% {
+    background-position: 0;
   }
 }
 
