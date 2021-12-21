@@ -210,11 +210,10 @@ header .fa-chevron-down {
   cursor: pointer;
 }
 
-.why-us__box-img {
+.why-us__box--img {
   height: 300px;
   display: inline-block;
-  min-width: 300px;
-  background-image: url("../img/sq.jpg");
+  width: 300px;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -227,21 +226,20 @@ header .fa-chevron-down {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
   bottom: 0px;
-  width: 100%;
   height: 100%;
   text-transform: uppercase;
-  z-index: 50;
   background-color: #000000;
   color: #FFF;
   font-weight: bold;
-  opacity: .5;
+  opacity: 0.5;
   font-size: 3rem;
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
@@ -255,6 +253,18 @@ header .fa-chevron-down {
 .why-us__box .more-info-two {
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
+}
+
+.why-us__box .img-one {
+  background-image: url("../img/sq.jpg");
+}
+
+.why-us__box .img-two {
+  background-image: url("../img/business_sm.jpg");
+}
+
+.why-us__box .img-three {
+  background-image: url("../img/social_big.png");
 }
 
 .why-us__box .img-one:hover .more-info-one {
@@ -305,6 +315,10 @@ header .fa-chevron-down {
 
 .why-us__box-text .card-text__more .fas {
   font-size: 1.6rem;
+}
+
+.why-us__box-text .card-text__more--two {
+  text-align: left;
 }
 
 .why-us__box-text .card-text__more:hover {
@@ -425,7 +439,7 @@ header .fa-chevron-down {
           transform: translateX(0);
 }
 
-.why-us .reverted .why-us__box-img {
+.why-us .reverted .why-us__box--img {
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;

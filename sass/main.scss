@@ -179,11 +179,10 @@ header {
     margin-top: 20px;
     cursor: pointer;
 
-    &-img {
+    &--img {
       height: 300px;
       display: inline-block;
-      min-width: 300px;
-      background-image: url("../img/sq.jpg");
+      width: 300px;
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
@@ -198,6 +197,18 @@ header {
 
     .more-info-two {
       transform: translateX(100%);
+    }
+
+    .img-one {
+      background-image: url("../img/sq.jpg");
+    }
+
+    .img-two {
+      background-image: url("../img/business_sm.jpg");
+    }
+
+    .img-three {
+      background-image: url("../img/social_big.png");
     }
 
     .img-one:hover {
@@ -241,6 +252,10 @@ header {
           transition: .3s color, .3s font-size;
           .fas {
             font-size: 1.6rem;
+          }
+
+          &--two {
+            text-align: left;
           }
         }
 
@@ -318,7 +333,7 @@ header {
   }
 
   .reverted {
-    .why-us__box-img {
+    .why-us__box--img {
       order: 2;
     }
     .why-us__box-text {
