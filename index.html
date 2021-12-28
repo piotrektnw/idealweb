@@ -19,17 +19,18 @@
 </head>
 <!-- 
 Think of what could be included here:
-- function offset in js not ready
--maybe make i-containers always 100vh high?
-- prettier do ustawienia jest (nie działa na html i js a działa na scss)
-- irregular borders between sections?
+
+- pseudoclass to make border between sections irregular or more interesting?
+- osobna podstrona "prices"
+- nav change color does not work
+- end at line 209
  -->
 
 <body>
     <main>
         <header id="home" class="section dark-section">
             <!-- WRAPPER DOESNT WORK! -->
-             <div class="wrapper">
+            <div class="wrapper">
                 <button class="burger-btn fas fa-bars"></button>
             </div>
 
@@ -39,6 +40,7 @@ Think of what could be included here:
                 <a href="#why-us" class="nav-link">Dlaczego my?</a>
                 <a href="#offer" class="nav-link">Oferta</a>
                 <a href="#cooperation" class="nav-link">Współpraca</a>
+                <a href="/pricelist.html" class="nav-link">Cennik</a>
                 <a href="#contact" class="nav-link">Kontakt</a>
             </nav>
             <div class="hero-img">
@@ -61,7 +63,7 @@ Think of what could be included here:
         <!-- WHY-US START -->
 
         <section class="why-us bright-section padding-bottom" id="why-us">
-       
+
             <div class="one hider">
                 <ul class="one__list one__list--one">
                     <li> Proces tworzenia strony internetowej dzielimy na kilka bardzo
@@ -71,10 +73,9 @@ Think of what could be included here:
                             <i class="fas fa-comments"></i>
                         </div>
 
-                        <p class="text-info"> <span class="highlight">Rozmowa</span> - kładziemy ogromny mocny nacisk na pełne zrozumienie
-                            Twoich oczekiwań. Rozumiemy jak ważne jest
-                            zrozumienie potrzeb
-                            klienta do zrealizowania idealnego projektu.
+                        <p class="text-info"> <span class="highlight">Rozmowa</span> - kładziemy ogromny nacisk na
+                            pełne zrozumienie
+                            Twoich oczekiwań. Rozumiemy jak bardzo od tego zależy zrealizowanie idealnego projektu.
                         </p>
                     </li>
                     <li>
@@ -93,17 +94,19 @@ Think of what could be included here:
                         <div class="i-container">
                             <i class="fas fa-brain"></i>
                         </div>
-                        <p class="text-info"><span class="highlight">Burza mózgów</span>     - mając solidny materiał do analizy, wyciągamy z niego
+                        <p class="text-info"><span class="highlight">Burza mózgów</span> - mając solidny materiał do
+                            analizy, wyciągamy z niego
                             to co najważniejsze,
                             identyfikujemy potrzeby i
-                            przygotowujemy odpowiedzi na nie.
+                            przygotowujemy dla nich odpowiedzi.
                         </p>
                     </li>
                     <li>
                         <div class="i-container">
                             <i class="fas fa-pencil-ruler"></i>
                         </div>
-                        <p class="text-info"><span class="highlight"> Szkic projektu</span> - po trzech etapach zbierania i analizowania
+                        <p class="text-info"><span class="highlight"> Szkic projektu</span> - po trzech etapach
+                            zbierania i analizowania
                             danych, przygotowujemy zarys Twojej
                             nowej
                             strony internetowej.
@@ -114,7 +117,8 @@ Think of what could be included here:
                             <i class="fas fa-gem"></i>
                         </div>
                         <p class="text-info">
-                            <span class="highlight">  Ostatnie szlify</span> - po konsultacji z Tobą, wprowadzamy uzgodnione
+                            <span class="highlight"> Ostatnie szlify</span> - po konsultacji z Tobą, wprowadzamy
+                            uzgodnione
                             zmiany (lub nie - jeśli nasz
                             projekt tak mocno przypadł Ci do gustu:))
                         </p>
@@ -123,8 +127,9 @@ Think of what could be included here:
                         <div class="i-container">
                             <i class="fas fa-file-code"></i>
                         </div>
-                        <p class="text-info"><span class="highlight">Piszemy kod</span> - od tego momentu przelewamy projekt do edytora
-                            kodu, kodu gdzie zaczyna nabierać
+                        <p class="text-info"><span class="highlight">Piszemy kod</span> - od tego momentu przelewamy
+                            projekt do edytora
+                            kodu, gdzie zaczyna nabierać
                             realnych barw i kształtów.
                         </p>
                     </li>
@@ -132,96 +137,77 @@ Think of what could be included here:
             </div>
             <div class="two hider">
                 <ul class="two__list two__list--two">
-                    <li> Proces tworzenia strony internetowej dzielimy na kilka bardzo
-                        istotnych etapów:</li>
+                    <li> Widoczność i przewaga nad konkurencją</li>
                     <li>
                         <div class="i-container">
-                            <i class="fas fa-comments"></i>
+                            <i class="fas fa-globe"></i>
                         </div>
 
-                        <p class="text-info"> <span class="highlight">Rozmowa</span> - kładziemy ogromny mocny nacisk na pełne zrozumienie
-                            Twoich oczekiwań. Rozumiemy jak ważne jest
-                            zrozumienie potrzeb
-                            klienta do zrealizowania idealnego projektu.
+                        <p class="text-info"> <span class="highlight">Dzisiaj </span> trudno sobie wyobrazić biznes,
+                            który nie jest obecny w internecie. Dlatego wiele firm, jednak nadal nie wszystkie, posiada
+                            własne strony internetowe. Co więcej, duża część z nich ma strony przestarzałe, nieaktualne
+                            i
+                            niedostosowane do dzisiejszych wymagań. Często są one nisko pozycjonowane przez
+                            wyszukiwarki z uwagi na przestarzałe rozwiązania, powolne ładowanie treści czy
+                            nieporządek w kodzie strony.
                         </p>
                     </li>
                     <li>
                         <div class="i-container">
-                            <i class="fas fa-search"></i>
-                        </div>
-                        <p class="text-info"> <span class="highlight">Badanie specyfiki branży </span>- chcemy
-                            wiedzieć czego oczekują klienci
-                            na Twoim rynku po to, by
-                            Twoja
-                            strona internetowa odpowiadała na jak największą ilość ich potrzeb.
-                        </p>
-                    </li>
-
-                    <li>
-                        <div class="i-container">
-                            <i class="fas fa-brain"></i>
-                        </div>
-                        <p class="text-info"><span class="highlight">Burza mózgów</span>     - mając solidny materiał do analizy, wyciągamy z niego
-                            to co najważniejsze,
-                            identyfikujemy potrzeby i
-                            przygotowujemy odpowiedzi na nie.
-                        </p>
-                    </li>
-                    <li>
-                        <div class="i-container">
-                            <i class="fas fa-pencil-ruler"></i>
-                        </div>
-                        <p class="text-info"><span class="highlight"> Szkic projektu</span> - po trzech etapach zbierania i analizowania
-                            danych, przygotowujemy zarys Twojej
-                            nowej
-                            strony internetowej.
-                        </p>
-                    </li>
-                    <li>
-                        <div class="i-container">
-                            <i class="fas fa-gem"></i>
+                            <i class="fas fa-check-square"></i>
                         </div>
                         <p class="text-info">
-                            <span class="highlight">  Ostatnie szlify</span> - po konsultacji z Tobą, wprowadzamy uzgodnione
-                            zmiany (lub nie - jeśli nasz
-                            projekt tak mocno przypadł Ci do gustu:))
+                            <span class="highlight"> Porządaną widoczność</span> w internecie możesz osiągnąć przede
+                            wszystkim za pomocą
+                            dobrze wykonanej strony internetowej. Na to czy strona jest "dobra" lub nie, wpływ ma wiele
+                            czynników. Twój
+                            przyszły klient, szukając produktów lub usług takich jak Twoje nie dowie się o Tobie dopóki
+                            nie znajdzie Twojej
+                            firmy w internecie. Gdy użytkownik wpisuje hasło w wyszukiwarce, decyzję o wyświetlonych
+                            wynikach "podejmuje" wyszukiwarka. Za to, czy Twoja firma znajdzie się wysoko w wynikach
+                            wyszukiwania (np. w Google) - odpowiada poprawny kod strony, prawidłowo przedstawione treści
+                            a także użyte odpowiednie słowa kluczowe.
                         </p>
                     </li>
                     <li>
                         <div class="i-container">
-                            <i class="fas fa-file-code"></i>
+                            <i class="fas fa-trophy"></i>
                         </div>
-                        <p class="text-info"><span class="highlight">Piszemy kod</span> - od tego momentu przelewamy projekt do edytora
-                            kodu, kodu gdzie zaczyna nabierać
-                            realnych barw i kształtów.
+                        <p class="text-info"><span class="highlight">Widoczność i przewaga Twojej firmy</span> w dużym
+                            stopniu zależą od tego, jak zostanie wykonana Twoja strona internetowa. Budując Twoją stronę
+                            skupiamy się na całościowym
+                            podejściu do projektu, tak aby spełnił wyśrubowane wymagania wyszukiwarek, Twoich klientów
+                            oraz spełnił Twoje
+                            oczekiwania.
                         </p>
                     </li>
                 </ul>
             </div>
             <div class="thr hider">
                 <ul class="thr__list two__list--thr">
-                    <li> Proces tworzenia strony internetowej dzielimy na kilka bardzo
-                        istotnych etapów:</li>
+                    <li> Jak zadbać o niesamowite pierwsze wrażenie?</li>
                     <li>
                         <div class="i-container">
-                            <i class="fas fa-comments"></i>
+                            <i class="fas fa-stopwatch"></i>
                         </div>
 
-                        <p class="text-info"> <span class="highlight">Rozmowa</span> - kładziemy ogromny mocny nacisk na pełne zrozumienie
-                            Twoich oczekiwań. Rozumiemy jak ważne jest
-                            zrozumienie potrzeb
-                            klienta do zrealizowania idealnego projektu.
+                        <p class="text-info"> <span class="highlight">Mniej niż 5 sekund </span> - średnio tyle czasu
+                            jest potrzebne
+                            użytkownikowi do ocenienia oglądanej strony internetowej. To oznacza, że Twoja strona
+                            internetowa ma około
+                            5 sekund na zdobycie zainteresowania potencjalnego klienta. Czy wiesz jak wiele jest stron
+                            które
+                            tego zainteresowania nie zdobywają? Powodów do tego jest wiele: nieaktualne treści (jeden z
+                            najczęstszych błędów to nieaktualna data w stopce), niedopasowane zdjęcia, nieodpowiednio
+                            dobrane kolory i czcionki, brak responsywności,
+                            długość ładowania i wiele, wiele innych.
                         </p>
                     </li>
                     <li>
                         <div class="i-container">
                             <i class="fas fa-search"></i>
                         </div>
-                        <p class="text-info"> <span class="highlight">Badanie specyfiki branży </span>- chcemy
-                            wiedzieć czego oczekują klienci
-                            na Twoim rynku po to, by
-                            Twoja
-                            strona internetowa odpowiadała na jak największą ilość ich potrzeb.
+                        <p class="text-info"> <span class="highlight">Zainteresowanie przyszłego klienta </span> zależy
                         </p>
                     </li>
 
@@ -229,7 +215,8 @@ Think of what could be included here:
                         <div class="i-container">
                             <i class="fas fa-brain"></i>
                         </div>
-                        <p class="text-info"><span class="highlight">Burza mózgów</span>     - mając solidny materiał do analizy, wyciągamy z niego
+                        <p class="text-info"><span class="highlight">Burza mózgów</span> - mając solidny materiał do
+                            analizy, wyciągamy z niego
                             to co najważniejsze,
                             identyfikujemy potrzeby i
                             przygotowujemy odpowiedzi na nie.
@@ -239,7 +226,8 @@ Think of what could be included here:
                         <div class="i-container">
                             <i class="fas fa-pencil-ruler"></i>
                         </div>
-                        <p class="text-info"><span class="highlight"> Szkic projektu</span> - po trzech etapach zbierania i analizowania
+                        <p class="text-info"><span class="highlight"> Szkic projektu</span> - po trzech etapach
+                            zbierania i analizowania
                             danych, przygotowujemy zarys Twojej
                             nowej
                             strony internetowej.
@@ -250,7 +238,8 @@ Think of what could be included here:
                             <i class="fas fa-gem"></i>
                         </div>
                         <p class="text-info">
-                            <span class="highlight">  Ostatnie szlify</span> - po konsultacji z Tobą, wprowadzamy uzgodnione
+                            <span class="highlight"> Ostatnie szlify</span> - po konsultacji z Tobą, wprowadzamy
+                            uzgodnione
                             zmiany (lub nie - jeśli nasz
                             projekt tak mocno przypadł Ci do gustu:))
                         </p>
@@ -259,7 +248,8 @@ Think of what could be included here:
                         <div class="i-container">
                             <i class="fas fa-file-code"></i>
                         </div>
-                        <p class="text-info"><span class="highlight">Piszemy kod</span> - od tego momentu przelewamy projekt do edytora
+                        <p class="text-info"><span class="highlight">Piszemy kod</span> - od tego momentu przelewamy
+                            projekt do edytora
                             kodu, kodu gdzie zaczyna nabierać
                             realnych barw i kształtów.
                         </p>
@@ -267,7 +257,7 @@ Think of what could be included here:
                 </ul>
             </div>
 
-           
+
 
             <div class="wrapper">
                 <h2 class="title">Co <span class="highlight">zyskasz</span> pracując z nami?</h2>
@@ -280,11 +270,13 @@ Think of what could be included here:
                         <div class="why-us__box-text">
 
                             <h3 class="card-title">Precyzyjnie zaprojektowaną stronę internetową</h3>
-                            <p class="card-text">Nasze strony powstają w przemyślany i poukładany sposób.  To tutaj uważnie słuchamy Twoich potrzeb, zadajemy
+                            <p class="card-text">Nasze strony powstają w przemyślany i poukładany sposób. To tutaj
+                                uważnie słuchamy Twoich potrzeb, zadajemy
                                 pytania, prowadzimy szczegółową analizę Twoich wymagań, konsultujemy z Tobą
                                 pomysły, analizujemy specyfikę Twojej branży oraz oczekiwań klientów. To tutaj
                                 dostosowujemy pomysły do wszystkich zidentyfikowanych potrzeb.</p>
-                            <p class="card-text card-text__more"><span class="hide">one</span> Czytaj więcej <i class="fas fa-chevron-right"></i> </p>
+                            <p class="card-text card-text__more"><span class="hide">one</span> Czytaj więcej <i
+                                    class="fas fa-chevron-right"></i> </p>
                         </div>
                     </div>
                 </div>
@@ -297,14 +289,15 @@ Think of what could be included here:
 
                         <div class="why-us__box-text">
                             <h3 class="card-title">Widoczność i przewagę</h3>
-                            <p class="card-text">Firma bez obecności w internecie jest jak samochód bez paliwa. Nigdzie
-                                nie dotrzesz. Czy wiesz ile biznesów nadal nie zadbało o tę sferę promocji? Czy wiesz
+                            <p class="card-text">Firma bez obecności w internecie jest jak samochód bez paliwa. Czy
+                                wiesz ile biznesów nadal nie zadbało o tę sferę promocji? Czy wiesz
                                 ile firm ma strony przestarzałe lub niedostosowane do dzisiejszych potrzeb i
                                 technologii?
                                 Pomyśl jak daleko w tyle zostawisz tych którzy nie dbają o tę (najważniejszą) obecnie
                                 sferę promocji swojej firmy.
                             </p>
-                            <p class="card-text card-text__more card-text__more--two"><span class="hide">two</span>  <i class="fas fa-chevron-left"> </i>   Czytaj więcej </p>
+                            <p class="card-text card-text__more card-text__more--two"><span class="hide">two</span> <i
+                                    class="fas fa-chevron-left"> </i> Czytaj więcej </p>
                         </div>
                     </div>
                 </div>
@@ -319,7 +312,8 @@ Think of what could be included here:
                                 bardzo krótki czas jest kluczowy w procesie podejmowania decyzji o dalszym
                                 zainteresowaniu daną stroną i firmą która ją posiada.
                             </p>
-                            <p class="card-text card-text__more"><span class="hide">thr</span> Czytaj więcej <i class="fas fa-chevron-right"></i> </p>
+                            <p class="card-text card-text__more"><span class="hide">thr</span> Czytaj więcej <i
+                                    class="fas fa-chevron-right"></i> </p>
                         </div>
                     </div>
                 </div>
