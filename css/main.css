@@ -451,6 +451,19 @@ header .fa-chevron-down {
           order: 1;
 }
 
+.why-us .why-us-link {
+  text-decoration: underline;
+  -webkit-text-decoration-color: #fca311;
+          text-decoration-color: #fca311;
+  color: #fff;
+  -webkit-transition: 0.3s font-size, 0.3s color;
+  transition: 0.3s font-size, 0.3s color;
+}
+
+.why-us .why-us-link:hover {
+  color: #fca311;
+}
+
 .contact {
   position: relative;
   background-color: #14213d;
@@ -496,6 +509,7 @@ header .fa-chevron-down {
   font-size: 1.6rem;
   width: 95%;
   max-width: 95%;
+  min-width: 95%;
   min-height: 150px;
 }
 
@@ -552,6 +566,7 @@ header .fa-chevron-down {
 .contact .contact-ul__item--one .contact-data-sec input {
   display: block;
   width: 100%;
+  min-width: 100%;
 }
 
 .contact .contact-ul__item--two {
@@ -643,18 +658,10 @@ header .fa-chevron-down {
 }
 
 .offer ul .offer__img--six {
-  background-image: url("../img/drawings/seo.svg");
-}
-
-.offer ul .offer__img--seven {
   background-image: url("../img/drawings/hosting.svg");
 }
 
-.offer ul .offer__img--eight {
-  background-image: url("../img/drawings/domain.svg");
-}
-
-.offer ul .offer__img--nine {
+.offer ul .offer__img--seven {
   background-image: url("../img/drawings/implementation.svg");
 }
 

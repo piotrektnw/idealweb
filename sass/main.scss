@@ -338,6 +338,17 @@ header {
 			order: 1;
 		}
 	}
+
+	.why-us-link {
+		text-decoration: underline;
+		text-decoration-color: $orange;
+		color: $pure-white;
+		transition: 0.3s font-size, 0.3s color;
+	}
+
+	.why-us-link:hover {
+		color: $orange;
+	}
 }
 
 // END OF WHY-US
@@ -374,6 +385,7 @@ header {
 	&__form-textarea {
 		@include contactForm;
 		max-width: 95%;
+		min-width: 95%;
 		min-height: 150px;
 	}
 
@@ -416,6 +428,7 @@ header {
 					input {
 						display: block;
 						width: 100%;
+						min-width: 100%;
 					}
 				}
 			}
@@ -483,7 +496,6 @@ header {
 				&--two {
 					background-image: url('../img/drawings/graphic_project.svg');
 				}
-
 				&--three {
 					background-image: url('../img/drawings/search_engine.svg');
 				}
@@ -494,15 +506,9 @@ header {
 					background-image: url('../img/drawings/responsive_2.svg');
 				}
 				&--six {
-					background-image: url('../img/drawings/seo.svg');
-				}
-				&--seven {
 					background-image: url('../img/drawings/hosting.svg');
 				}
-				&--eight {
-					background-image: url('../img/drawings/domain.svg');
-				}
-				&--nine {
+				&--seven {
 					background-image: url('../img/drawings/implementation.svg');
 				}
 			}
