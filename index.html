@@ -365,32 +365,43 @@ Think of what could be included here:
 
             <h2 class="title"><span class="highlight">Napisz</span> do nas!</h2>
             <div class="wrapper">
+
                 <ul class="contact-ul">
+
                     <li class="contact-ul__item contact-ul__item--one">
-                        <form action="contact.php" method="post" class="contact__form">
-                            <div class="contact__form-top">
-                                <label for="name" class="contact__form-label">Twoje imię i nazwisko: </label>
-                                <input type="text" class="contact__form-input" id="name" name="visitor_name" required>
-                                <div class="contact-data">
-                                    <div class="contact-data-first">
-                                        <label for="email" class="contact__form-label">Adres email: </label>
-                                        <input type="text" class="contact__form-input" id="email" name="visitor_email"
-                                            required>
-                                    </div>
-                                    <div class="contact-data-sec">
-                                        <label for="phone" class="contact__form-label">Telefon kontaktowy: </label>
-                                        <input type="text" class="contact__form-input" id="phone" name="visitor_phone"
-                                            required>
+                        <fieldset disabled="disabled">
+                            <!-- action="contact.php" method="post" not working now -->
+                            <form class="contact__form">
+                                <div class="contact__form-top">
+                                    <label for="name" class="contact__form-label">Twoje imię i nazwisko: </label>
+                                    <input type="text" class="contact__form-input" id="name" name="visitor_name"
+                                        required>
+                                    <div class="contact-data">
+                                        <div class="contact-data-first">
+                                            <label for="email" class="contact__form-label">Adres email: </label>
+                                            <input type="text" class="contact__form-input" id="email"
+                                                name="visitor_email" required>
+                                        </div>
+                                        <div class="contact-data-sec">
+                                            <label for="phone" class="contact__form-label">Telefon kontaktowy:
+                                            </label>
+                                            <input type="text" class="contact__form-input" id="phone"
+                                                name="visitor_phone" required>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <label for="msg" class="contact__form-label">Wiadomość: </label>
+                                <label for="msg" class="contact__form-label">Wiadomość: </label>
 
-                            <textarea id="msg" class="contact__form-textarea" name="visitor_msg" required></textarea>
-                            <button type="submit" class="contact__form-btn btn-special-animation">Wyślij</button>
+                                <textarea id="msg" class="contact__form-textarea" name="visitor_msg"
+                                    required></textarea>
+                        </fieldset>
+                        <button type="submit" class="contact__form-btn btn-special-animation">Wyślij</button>
                         </form>
+
+
                     </li>
+
                     <li class="contact-ul__item contact-ul__item--two">
                         <div class="contact-info">
                             <p class="detailed-info">
@@ -403,6 +414,7 @@ Think of what could be included here:
                         </div>
                     </li>
                 </ul>
+
             </div>
         </section>
 

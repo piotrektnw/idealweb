@@ -8,6 +8,7 @@ const devDescription = document.querySelector('.dev-description');
 const showMoreInfo = document.querySelectorAll('.more-info-one, .more-info-two, .more-info-three, .why-us__box')
 const allContents = document.querySelectorAll('.one, .two, .thr')
 const hiders = document.querySelectorAll('.hider')
+const formBtn = document.querySelector('.contact__form-btn')
 
 const hide = () => {
     allContents.forEach(item => {
@@ -22,6 +23,10 @@ const showContent = (e) => {
     let displayContent = document.querySelector(toDisplay);
 
     displayContent.classList.add("show")
+}
+
+const displayMsg = () => {
+    alert("Kończymy konfigurować formularz kontaktowy. Do czasu jego uruchomienia prosimy skorzystaj z adresu email lub numeru telefonu obok. Dziękujemy!")
 }
 
 
@@ -96,6 +101,9 @@ hiders.forEach(item => {
     item.addEventListener('click', hide)
 });
 
+
+//handle contact form
+formBtn.addEventListener('click', displayMsg)
 
 // current year in footer 
 currentDate();
