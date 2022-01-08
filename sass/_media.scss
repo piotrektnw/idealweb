@@ -1,7 +1,36 @@
 @media (max-width: 768px) {
-	// main {
-	//     display: none;
-	// }
+	header {
+		.hero-img {
+			background-image: url('/img/business_sm.jpg');
+		}
+	}
+
+	.nav {
+		height: 200px;
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: start;
+		opacity: 1;
+	}
+
+	.why-us {
+		.container {
+			.child-1,
+			.child-2,
+			.child-3,
+			.child-4 {
+				width: 90%;
+				margin: 5px;
+			}
+		}
+	}
+
+	.info_fade {
+		.fas {
+			display: none;
+		}
+	}
+
 	.for-mobile {
 		display: flex;
 		flex-direction: column;
@@ -99,13 +128,22 @@
 }
 
 @media (min-width: 769px) {
-	// .for-mobile {
-	//     display: none;
-
-	// }
 	header {
 		.hero-img {
 			background-image: url('../img/business_big.jpg');
 		}
 	}
+}
+
+@media (max-width: 576px) {
+	header {
+		h1 {
+			font-size: 4rem;
+		}
+		h2 {
+			font-size: 2rem;
+		}
+	}
+
+	
 }

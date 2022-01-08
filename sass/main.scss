@@ -91,6 +91,10 @@ nav:hover {
 	opacity: 1;
 }
 
+.nav-opacity {
+	opacity: 1;
+}
+
 .nav-link:hover {
 	color: $orange;
 	font-size: 2.2rem;
@@ -105,11 +109,11 @@ nav:hover {
 // HEADER
 header {
 	h1 {
-		font-size: 6rem;
+		font-size: 5rem;
 		animation: tracking-in-expand 1.5s 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) both;
 	}
 	h2 {
-		font-size: 5rem;
+		font-size: 4rem;
 		animation: tracking-in-expand 1.5s 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) both;
 	}
 	color: $pure-white;
@@ -117,9 +121,9 @@ header {
 
 	.hero-img {
 		position: relative;
-		height: 80vh;
+		height: 100vh;
 		width: 100vw;
-		background-image: url('../img/business_sm.jpg');
+		background-image: url('../img/business_big.jpg');
 		background-position: bottom;
 		background-size: cover;
 		background-attachment: fixed;
@@ -158,200 +162,6 @@ header {
 }
 
 //END OF HEADER
-
-//START OF WHY-US
-
-.why-us {
-	background-color: $grey;
-	.wrapper {
-		width: 90%;
-		max-width: 1024px;
-	}
-
-	&__box {
-		height: 300px;
-		display: flex;
-		align-items: start;
-		flex-wrap: wrap;
-		overflow: hidden;
-		margin-top: 20px;
-		cursor: pointer;
-
-		&--img {
-			height: 300px;
-			display: inline-block;
-			width: 300px;
-			background-position: center;
-			background-size: cover;
-			background-repeat: no-repeat;
-			cursor: pointer;
-		}
-
-		.more-info-one,
-		.more-info-two,
-		.more-info-three {
-			@include info-style;
-		}
-
-		.more-info-two {
-			transform: translateX(100%);
-		}
-
-		.img-one {
-			background-image: url('../img/sq.jpg');
-		}
-
-		.img-two {
-			background-image: url('../img/business_sm.jpg');
-		}
-
-		.img-three {
-			background-image: url('../img/social_big.png');
-		}
-
-		.img-one:hover {
-			.more-info-one {
-				transform: translateX(0);
-			}
-		}
-		.img-two:hover {
-			.more-info-two {
-				transform: translateX(0);
-			}
-		}
-		.img-three:hover {
-			.more-info-three {
-				transform: translateX(0);
-			}
-		}
-
-		&-text {
-			flex-basis: 300px;
-			flex-grow: 1;
-			display: inline-block;
-			height: 100%;
-			min-width: 300px;
-			text-align: center;
-
-			.card-title {
-				color: $dark-blue;
-				margin: 2rem 4rem;
-				font-size: 3rem;
-			}
-
-			.card-text {
-				color: $dark-blue;
-				text-align: justify;
-				margin: 2rem 4rem;
-				font-size: 2rem;
-
-				&__more {
-					text-align: right;
-					transition: 0.3s color, 0.3s font-size;
-					.fas {
-						font-size: 1.6rem;
-					}
-
-					&--two {
-						text-align: left;
-					}
-				}
-
-				&__more:hover {
-					color: $orange;
-					font-size: 2.1rem;
-				}
-			}
-		}
-	}
-
-	.one,
-	.two,
-	.thr {
-		@include show-details;
-		justify-content: center;
-
-		&__list {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			flex-wrap: wrap;
-			width: 80%;
-			height: 90%;
-			color: $pure-white;
-			list-style: none;
-
-			li > * {
-				vertical-align: middle;
-				line-height: normal;
-			}
-
-			li:first-child {
-				text-align: center;
-				font-size: 2.8rem;
-				font-weight: bold;
-				text-transform: uppercase;
-			}
-		}
-
-		li {
-			margin: 10px;
-			text-align: justify;
-			width: 100%;
-
-			.highlight {
-				font-weight: bold;
-			}
-
-			.i-container {
-				display: inline-block;
-				text-align: center;
-				margin: 0 2%;
-				width: 5%;
-
-				.fas {
-					font-size: 4rem;
-				}
-			}
-
-			.text-info {
-				width: 89%;
-				display: inline-block;
-				font-size: 2rem;
-			}
-		}
-	}
-
-	.two {
-		transform: translateX(100%);
-	}
-
-	.show {
-		transform: translateX(0);
-	}
-
-	.reverted {
-		.why-us__box--img {
-			order: 2;
-		}
-		.why-us__box-text {
-			order: 1;
-		}
-	}
-
-	.why-us-link {
-		text-decoration: underline;
-		text-decoration-color: $orange;
-		color: $pure-white;
-		transition: 0.3s font-size, 0.3s color;
-	}
-
-	.why-us-link:hover {
-		color: $orange;
-	}
-}
-
-// END OF WHY-US
 
 // CONTACT
 
@@ -460,6 +270,191 @@ header {
 }
 //END OF CONTACT
 
+// //START OF WHY-US
+
+.why-us {
+	.container {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+
+		.child-1 {
+			background-image: url('/img/sq.jpg');
+		}
+
+		.child-2 {
+			background-image: url('/img/project_big.jpg');
+		}
+
+		.child-3 {
+			background-image: url('/img/waterfall_big.jpg');
+		}
+
+		.child-1,
+		.child-2,
+		.child-3 {
+			height: 400px;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			width: 33%;
+			min-width: 280px;
+			min-height: 300px;
+			flex-grow: 1;
+			perspective: 800px;
+
+			&__hider {
+				background-color: black;
+				width: 100%;
+				opacity: 0.7;
+				height: 100%;
+				transition: 0.6s opacity, 0.6s transform;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				cursor: pointer;
+				flex-direction: column;
+
+				&--text {
+					font-size: 3rem;
+					text-align: center;
+					color: white;
+					transition: color 0.3s;
+				}
+
+				&--text-2 {
+					font-size: 3rem;
+					transform: rotateY(180deg);
+					transition: 0.6s color;
+				}
+			}
+		}
+	}
+
+	.child-1:hover {
+		.child-1__hider {
+			transform: rotateY(-180deg);
+			cursor: pointer;
+
+			&--text {
+				color: black;
+				opacity: 0.7;
+			}
+
+			&--text-2 {
+				color: white;
+			}
+		}
+	}
+
+	.child-2:hover {
+		.child-2__hider {
+			transform: rotateY(-180deg);
+			cursor: pointer;
+
+			&--text {
+				color: black;
+				opacity: 0.7;
+			}
+
+			&--text-2 {
+				color: white;
+			}
+		}
+	}
+
+	.child-3:hover {
+		.child-3__hider {
+			transform: rotateY(-180deg);
+			cursor: pointer;
+
+			&--text {
+				color: black;
+				opacity: 0.7;
+			}
+
+			&--text-2 {
+				color: white;
+			}
+		}
+	}
+
+	.one,
+	.two,
+	.thr {
+		@include show-details;
+		justify-content: center;
+		align-items: center;
+
+		&__list {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-wrap: wrap;
+			width: 80%;
+			height: 90%;
+			color: $pure-white;
+			list-style: none;
+
+			li > * {
+				vertical-align: middle;
+				line-height: normal;
+			}
+
+			li:first-child {
+				text-align: center;
+				font-size: 2.8rem;
+				font-weight: bold;
+				text-transform: uppercase;
+			}
+		}
+
+		li {
+			margin: 10px;
+			text-align: justify;
+			width: 100%;
+
+			.highlight {
+				font-weight: bold;
+			}
+
+			.i-container {
+				display: inline-block;
+				text-align: center;
+				margin: 0 2%;
+				width: 5%;
+
+				.fas {
+					font-size: 4rem;
+				}
+			}
+
+			.text-info {
+				width: 89%;
+				display: inline-block;
+				font-size: 2rem;
+			}
+		}
+	}
+
+	.show {
+		transform: translateX(0);
+	}
+
+	.why-us-link {
+		text-decoration: underline;
+		text-decoration-color: $orange;
+		color: $pure-white;
+		transition: 0.3s font-size, 0.3s color;
+	}
+
+	.why-us-link:hover {
+		color: $orange;
+	}
+}
+
+// // END OF WHY-US
+
 //START OF OFFER
 .offer {
 	display: flex;
@@ -467,6 +462,8 @@ header {
 	justify-content: center;
 	flex-wrap: wrap;
 	flex-direction: column;
+	color: $dark-blue;
+	font-size: 2rem;
 
 	ul {
 		list-style: none;
@@ -517,7 +514,6 @@ header {
 				display: inline-block;
 				min-width: 50%;
 				width: 50%;
-				font-size: 3rem;
 				text-align: center;
 				margin-left: 30px;
 			}

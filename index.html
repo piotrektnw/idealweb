@@ -22,14 +22,12 @@ Think of what could be included here:
 
 - pseudoclass to make border between sections irregular or more interesting?
 - osobna podstrona "prices"
-- nav change color does not work
-- end at line 209
  -->
 
 <body>
     <main>
         <header id="home" class="section dark-section">
-            <!-- WRAPPER DOESNT WORK! -->
+
             <div class="wrapper">
                 <button class="burger-btn fas fa-bars"></button>
             </div>
@@ -62,9 +60,9 @@ Think of what could be included here:
 
         <!-- WHY-US START -->
 
-        <section class="why-us bright-section padding-bottom section" id="why-us">
+        <section class="bright-section why-us " id="why-us">
 
-            <div class="one hider">
+            <div class="one info_hide">
                 <ul class="one__list one__list--one">
                     <li> Proces tworzenia strony internetowej dzielimy na kilka bardzo
                         istotnych etapów:</li>
@@ -135,7 +133,8 @@ Think of what could be included here:
                     </li>
                 </ul>
             </div>
-            <div class="two hider">
+
+            <div class="two info_hide">
                 <ul class="two__list two__list--two">
                     <li> Widoczność i przewaga nad konkurencją</li>
                     <li>
@@ -157,7 +156,7 @@ Think of what could be included here:
                             <i class="fas fa-check-square"></i>
                         </div>
                         <p class="text-info">
-                            <span class="highlight"> Porządaną widoczność</span> w internecie możesz osiągnąć przede
+                            <span class="highlight"> Pożądaną widoczność</span> w internecie możesz osiągnąć przede
                             wszystkim za pomocą
                             dobrze wykonanej strony internetowej. Na to czy strona jest "dobra" lub nie, wpływ ma wiele
                             czynników. Twój
@@ -183,7 +182,7 @@ Think of what could be included here:
                     </li>
                 </ul>
             </div>
-            <div class="thr hider">
+            <div class="thr info_hide">
                 <ul class="thr__list two__list--thr">
                     <li> Jak zadbać o niesamowite pierwsze wrażenie?</li>
                     <li>
@@ -235,73 +234,39 @@ Think of what could be included here:
                 </ul>
             </div>
 
+            <div class="section_container">
+                <h2 class="title">Co <span class="highlight">zyskasz</span> współpracując z nami?</h2>
 
-
-            <div class="wrapper">
-                <h2 class="title">Co <span class="highlight">zyskasz</span> pracując z nami?</h2>
-                <div data-aos="fade-left">
-                    <div class="why-us__box card-one">
-                        <div class="why-us__box--img img-one">
-                            <div class="more-info-one"><span class="hide">one</span>Sprawdź szczegóły</div>
-                        </div>
-
-                        <div class="why-us__box-text">
-
-                            <h3 class="card-title">Precyzyjnie zaprojektowaną stronę internetową</h3>
-                            <p class="card-text">Nasze strony powstają w przemyślany i poukładany sposób. To tutaj
-                                uważnie słuchamy Twoich potrzeb, zadajemy
-                                pytania, prowadzimy szczegółową analizę Twoich wymagań, konsultujemy z Tobą
-                                pomysły, analizujemy specyfikę Twojej branży oraz oczekiwań klientów. To tutaj
-                                dostosowujemy pomysły do wszystkich zidentyfikowanych potrzeb.</p>
-                            <p class="card-text card-text__more"><span class="hide">one</span> Czytaj więcej <i
-                                    class="fas fa-chevron-right"></i> </p>
+                <div class="container">
+                    <div class="child-1">
+                        <div class="child-1__hider show_content "><span class="hide">one</span>
+                            <p class="child-1__hider--text"><span class="hide">one</span>Precyzyjnie zaprojektowaną
+                                stronę
+                                internetową</p>
+                            <p class="child-1__hider--text-2"><span class="hide">one</span>Sprawdź szczegóły</p>
                         </div>
                     </div>
-                </div>
-                <div data-aos="fade-right">
-                    <div class="why-us__box reverted card-two">
-
-                        <div class="why-us__box--img img-two">
-                            <div class="more-info-two"><span class="hide">two</span>Sprawdź szczegóły</div>
+                    <div class="child-2">
+                        <div class="child-2__hider show_content"><span class="hide">two</span>
+                            <p class="child-2__hider--text"><span class="hide">two</span>Widoczność i przewagę</p>
+                            <p class="child-2__hider--text-2"><span class="hide">two</span>Sprawdź szczegóły</p>
                         </div>
-
-                        <div class="why-us__box-text">
-                            <h3 class="card-title">Widoczność i przewagę</h3>
-                            <p class="card-text">Firma bez obecności w internecie jest jak samochód bez paliwa. Czy
-                                wiesz ile biznesów nadal nie zadbało o tę sferę promocji? Czy wiesz
-                                ile firm ma strony przestarzałe lub niedostosowane do dzisiejszych potrzeb i
-                                technologii?
-                                Pomyśl jak daleko w tyle zostawisz tych którzy nie dbają o tę (najważniejszą) obecnie
-                                sferę promocji swojej firmy.
+                    </div>
+                    <div class="child-3">
+                        <div class="child-3__hider show_content"><span class="hide">thr</span>
+                            <p class="child-3__hider--text"><span class="hide">thr</span>Niesamowite pierwsze wrażenie
                             </p>
-                            <p class="card-text card-text__more card-text__more--two"><span class="hide">two</span> <i
-                                    class="fas fa-chevron-left"> </i> Czytaj więcej </p>
+                            <p class="child-3__hider--text-2"><span class="hide">thr</span>Sprawdź szczegóły</p>
+
                         </div>
                     </div>
                 </div>
-                <div data-aos="fade-left">
-                    <div class="why-us__box card-three">
-                        <div class="why-us__box--img img-three">
-                            <div class="more-info-three"><span class="hide">thr</span>Sprawdź szczegóły</div>
-                        </div>
-                        <div class="why-us__box-text card-three">
-                            <h3 class="card-title">Niesamowite pierwsze wrażenie </h3>
-                            <p class="card-text">Użytkownik ocenia stronę w czasie krótszym niż 5 sekund. Ten
-                                bardzo krótki czas jest kluczowy w procesie podejmowania decyzji o dalszym
-                                zainteresowaniu daną stroną i firmą która ją posiada.
-                            </p>
-                            <p class="card-text card-text__more"><span class="hide">thr</span> Czytaj więcej <i
-                                    class="fas fa-chevron-right"></i> </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            </div>
         </section>
+
         <!-- WHY-US END -->
 
         <section class="offer section bright-section" id="offer">
-            <h2 class="title">Co<span class="highlight"> otrzymujesz</span> w zamówieniu? </h2>
+            <h2 class="title">Co <span class="highlight"> otrzymujesz</span> w zamówieniu?</h2>
             <div class="wrapper">
 
                 <ul>
@@ -317,7 +282,8 @@ Think of what could be included here:
                     </li>
                     <li>
                         <div data-aos="fade-up-right" class="offer__img offer__img--three"></div>
-                        <p class="offer__text offer__text--three"> Stronę która będzie wysoko oceniana i pozycjonowana
+                        <p class="offer__text offer__text--three"> Stronę która będzie wysoko oceniana i
+                            pozycjonowana
                             przez wyszukiwarki. Jednym z naszych głównych celów jest optymalizacja Twojej strony pod
                             kątem SEO.
                             <span class="highlight">O co chodzi?</span>
@@ -336,7 +302,8 @@ Think of what could be included here:
                         </p>
                     </li>
                     <li>
-                        <p class="offer__text offer__text--six"> Rejestrację nowej domeny internetowej w bardzo dobrej
+                        <p class="offer__text offer__text--six"> Rejestrację nowej domeny internetowej w bardzo
+                            dobrej
                             cenie oraz dobry, bezpieczny i funkcjonalny hosting Twojej
                             strony internetowej.
                         </p>
@@ -345,7 +312,8 @@ Think of what could be included here:
                     <li>
                         <div data-aos="fade-up-right" class="offer__img offer__img--seven"></div>
                         <p class="offer__text offer__text--seven"> Kompleksowe wdrożenie - nie musisz martwić się o
-                            instalację na serwerze, hosting, podpięcie pod domenę i wiele innych - wszystko to robimy za
+                            instalację na serwerze, hosting, podpięcie pod domenę i wiele innych - wszystko to
+                            robimy za
                             Ciebie!
                         </p>
                     </li>
@@ -405,7 +373,8 @@ Think of what could be included here:
                     <li class="contact-ul__item contact-ul__item--two">
                         <div class="contact-info">
                             <p class="detailed-info">
-                                Chcesz stworzyć stronę internetową dla swojego biznesu? Zastanawiasz się jakie korzyści
+                                Chcesz stworzyć stronę internetową dla swojego biznesu? Zastanawiasz się jakie
+                                korzyści
                                 przyniesie Ci profesjonalna strona internetowa? Zadzwoń lub napisz do nas! Bardzo
                                 chętnie odpowiemy na Twoje pytania!
                             </p>

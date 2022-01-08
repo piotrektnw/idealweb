@@ -5,9 +5,9 @@ const sections = document.querySelectorAll('.section');
 const allNavLinks = document.querySelectorAll('.nav-link');
 const devDescription = document.querySelector('.dev-description');
 
-const showMoreInfo = document.querySelectorAll('.more-info-one, .more-info-two, .more-info-three, .why-us__box')
+const showMoreInfo = document.querySelectorAll('.show_content');
 const allContents = document.querySelectorAll('.one, .two, .thr')
-const hiders = document.querySelectorAll('.hider')
+const infoHiders = document.querySelectorAll('.info_hide')
 const formBtn = document.querySelector('.contact__form-btn')
 
 const hide = () => {
@@ -29,6 +29,11 @@ const displayMsg = () => {
     alert("Kończymy konfigurować formularz kontaktowy. Do czasu jego uruchomienia prosimy skorzystaj z adresu email lub numeru telefonu obok. Dziękujemy!")
 }
 
+const navBg = () => {
+
+       this.scrollY > 100 ?  nav.style.opacity = "1" : ""
+        
+    }
 
 const hideNav = () => {
     nav.classList.remove('show-menu')
@@ -84,6 +89,7 @@ window.addEventListener('scroll', handleNavBtn);
 allNavLinks.forEach(navLink => {
     navLink.addEventListener('click', hideNav)
 });
+window.addEventListener('scroll', navBg)
 
 
 //entrance animation
@@ -97,7 +103,7 @@ showMoreInfo.forEach((button) => {
     button.addEventListener('click', showContent)
 })
 
-hiders.forEach(item => {
+infoHiders.forEach(item => {
     item.addEventListener('click', hide)
 });
 
@@ -105,5 +111,5 @@ hiders.forEach(item => {
 //handle contact form
 formBtn.addEventListener('click', displayMsg)
 
-// current year in footer 
+// current year in footer ,
 currentDate();
