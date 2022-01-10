@@ -571,46 +571,59 @@ header .fa-chevron-down {
 }
 
 .offer {
+  color: #14213d;
+  font-size: 2rem;
+  margin: 10px;
+}
+
+.offer ul {
+  width: 100%;
+  list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  color: #14213d;
-  font-size: 2rem;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
-.offer ul {
-  list-style: none;
+.offer ul li {
+  width: 45%;
+  height: 300px;
 }
 
-.offer ul li > * {
-  vertical-align: middle;
-  line-height: normal;
-}
-
-.offer ul .offer {
+.offer ul li .text-container {
+  height: 100%;
   width: 100%;
-  text-align: justify;
+  position: relative;
+}
+
+.offer ul li .text-container p {
+  padding: 20px 0;
+  height: 200px;
+  position: absolute;
+  top: 50%;
+  font-size: 2.4rem;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  text-align: center;
 }
 
 .offer ul .offer__img {
   background-size: contain;
   background-repeat: no-repeat;
-  display: inline-block;
-  margin: 40px 10%;
+  margin: 20px 0 20px 20%;
   width: 300px;
-  height: 200px;
+  height: 100%;
   -webkit-transition: opacity 0.7s, -webkit-transform 0.7s cubic-bezier(0.65, 0.05, 0.36, 1);
   transition: opacity 0.7s, -webkit-transform 0.7s cubic-bezier(0.65, 0.05, 0.36, 1);
   transition: transform 0.7s cubic-bezier(0.65, 0.05, 0.36, 1), opacity 0.7s;
@@ -643,14 +656,6 @@ header .fa-chevron-down {
 
 .offer ul .offer__img--seven {
   background-image: url("../img/drawings/implementation.svg");
-}
-
-.offer ul .offer__text {
-  display: inline-block;
-  min-width: 50%;
-  width: 50%;
-  text-align: center;
-  margin-left: 30px;
 }
 
 .offer .title {
@@ -911,6 +916,12 @@ header .fa-chevron-down {
 }
 
 @media (max-width: 768px) {
+  header h1 {
+    font-size: 5rem;
+  }
+  header h2 {
+    font-size: 3rem;
+  }
   header .hero-img {
     background-image: url("/img/business_sm.jpg");
   }
@@ -935,82 +946,37 @@ header .fa-chevron-down {
     width: 90%;
     margin: 5px;
   }
-  .info_fade .fas {
+  .why-us .i-container .fas {
     display: none;
   }
-  .for-mobile {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    width: 100vw;
-    height: 100vh;
-    background-color: #14213d;
-    color: #fff;
-    text-align: center;
-  }
-  .for-mobile i {
-    display: block;
-    font-size: 10rem;
-    padding-bottom: 30px;
-  }
-  .for-mobile p {
-    padding: 10px 30px;
-    display: block;
-    font-size: 3rem;
-    text-align: center;
-  }
-  header h1 {
-    font-size: 5rem;
-  }
-  header h2 {
-    font-size: 3rem;
-  }
-  .why-us {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+  .offer .wrapper ul {
+    margin: 0;
     padding: 0;
   }
-  .why-us .wrapper {
+  .offer .wrapper ul .for-text {
+    height: 125px;
+  }
+  .offer .wrapper ul li {
     width: 100%;
+    margin: 0;
+    padding: 0;
   }
-  .why-us__box {
-    height: auto;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+  .offer .wrapper ul li .text-container {
+    height: 125px;
+    margin: 0;
+    padding: 0;
+  }
+  .offer .wrapper ul li .text-container p {
+    margin: 0;
+    padding: 0;
+    font-size: 2rem;
     width: 100%;
+    height: 125px;
   }
-  .why-us__box-img {
-    width: 100%;
-  }
-  .why-us__box-text {
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
-    background-color: blue;
-    width: 100%;
-  }
-  .why-us__box-text .card-text {
-    text-align: justify;
-  }
-  .why-us .reverted .why-us__box-img {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
+  .offer .wrapper .offer__img {
+    margin: 0 auto;
+    width: 300px;
+    padding: 0;
   }
   .contact .contact-ul {
     -ms-flex-wrap: wrap;

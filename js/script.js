@@ -2,13 +2,13 @@ const menuBtn = document.querySelector('.burger-btn');
 const nav = document.querySelector('.nav');
 const date = document.querySelector('.date');
 const sections = document.querySelectorAll('.section');
-const allNavLinks = document.querySelectorAll('.nav-link');
+const allNavLinks = document.querySelectorAll('.nav-link, .fa-chevron-down');
 const devDescription = document.querySelector('.dev-description');
 
 const showMoreInfo = document.querySelectorAll('.show_content');
-const allContents = document.querySelectorAll('.one, .two, .thr')
-const infoHiders = document.querySelectorAll('.info_hide')
-const formBtn = document.querySelector('.contact__form-btn')
+const allContents = document.querySelectorAll('.one, .two, .thr');
+const infoHiders = document.querySelectorAll('.info_hide');
+const formBtn = document.querySelector('.contact__form-btn');
 
 const hide = () => {
     allContents.forEach(item => {
@@ -31,9 +31,9 @@ const displayMsg = () => {
 
 const navBg = () => {
 
-       this.scrollY > 100 ?  nav.style.opacity = "1" : ""
-        
-    }
+    this.scrollY > 100 ? nav.style.opacity = "1" : ""
+
+}
 
 const hideNav = () => {
     nav.classList.remove('show-menu')
