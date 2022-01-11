@@ -369,7 +369,7 @@
                     <li class="contact-ul__item contact-ul__item--one">
                         <!-- <fieldset disabled="disabled"> -->
                         <!-- action="contact.php" method="post" not working now -->
-                        <form class="contact__form" action="/mail_handler.php" method="post">
+                        <form class="contact__form" action="/mail_handler.php" method="post" id="contactForm">
                             <div class="contact__form-top">
                                 <label for="name" class="contact__form-label">Twoje imię i nazwisko: </label>
                                 <input type="text" class="contact__form-input" id="name" name="visitor_name" required>
@@ -392,7 +392,9 @@
 
                             <textarea id="msg" class="contact__form-textarea" name="visitor_msg" required></textarea>
                             <!-- </fieldset> -->
-                            <button type="submit" class="contact__form-btn btn-special-animation">Wyślij</button>
+                            <button class="g-recaptcha contact__form-btn btn-special-animation"
+                                data-sitekey="6LesjQgeAAAAAMJE9KvX9rkCdoNG8vmR0wh7cqpO" data-callback='onSubmit'
+                                data-action='submit'>Wyślij</button>
                         </form>
 
 
@@ -469,6 +471,13 @@
         });
     </script>
     <!-- End of animations for 'timeline' section  -->
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script>
+        function onSubmit(token) {
+            document.getElementById("contactForm").submit();
+        }
+    </script>
+
     <script src="./js/script.js"></script>
 </body>
 
