@@ -25,9 +25,6 @@ const showContent = (e) => {
     displayContent.classList.add("show")
 }
 
-const displayMsg = () => {
-    alert("Kończymy konfigurować formularz kontaktowy. Do czasu jego uruchomienia prosimy skorzystaj z adresu email lub numeru telefonu obok. Dziękujemy!")
-}
 
 const navBg = () => {
 
@@ -106,10 +103,6 @@ showMoreInfo.forEach((button) => {
 infoHiders.forEach(item => {
     item.addEventListener('click', hide)
 });
-
-
-//handle contact form
-formBtn.addEventListener('click', displayMsg)
 
 // current year in footer ,
 currentDate();
