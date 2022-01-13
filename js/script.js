@@ -8,12 +8,49 @@ const devDescription = document.querySelector('.dev-description');
 const showMoreInfo = document.querySelectorAll('.show_content');
 const allContents = document.querySelectorAll('.one, .two, .thr');
 const infoHiders = document.querySelectorAll('.info_hide');
-const formBtn = document.querySelector('.contact__form-btn');
+const contactForm = document.querySelector('.contact__form');
+const nameAlert = document.querySelector('.name-alert');
+const emailAlertTwo = document.querySelector('.email-alert-two');
+const msgAlert = document.querySelector('.msg-alert');
+
+const formSendBtn = document.querySelector('.contact__form-btn');
 
 const hide = () => {
     allContents.forEach(item => {
         item.classList.remove('show')
     })
+}
+
+const formChecker = () => {
+    const mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    const formData = Object.fromEntries(new FormData(contactForm).entries());
+    
+    if(formData.visitor_name.length <= 0) {
+        nameAlert.classList.add('display')
+        setTimeout(function () {
+            nameAlert.classList.remove('display')
+        }, 2000)
+    // } else if (formData.visitor_email.length <= 0) {
+    //     emailAlertOne.style.display = "inline-block"
+    } else if (formData.visitor_msg.length <= 0) {
+        msgAlert.classList.add('display')
+        setTimeout(function () {
+            msgAlert.classList.remove('display')
+        }, 2000)
+    } else if (formData.visitor_msg.length >= 1000) {
+        console.log("msg too long");
+    }
+
+    if (!formData.visitor_email.match(mailformat)) {
+    emailAlertTwo.classList.add('display')
+    setTimeout(function () {
+        emailAlertTwo.classList.remove('display')
+    }, 2000)
+  }
+
+
+
+    console.log(formData);
 }
 
 const showContent = (e) => {
@@ -94,6 +131,8 @@ setTimeout(() => {
     updateDevDescription();
 }, 2500);
 
+// form validation 
+formSendBtn.addEventListener('click', formChecker)
 
 //handle why-us content
 showMoreInfo.forEach((button) => {

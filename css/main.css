@@ -318,6 +318,20 @@ header .fa-chevron-down {
   font-size: 3rem;
 }
 
+.contact .email-alert-two,
+.contact .name-alert,
+.contact .msg-alert {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 1rem;
+  color: red;
+  display: none;
+}
+
+.contact .display {
+  display: inline-block;
+}
+
 .why-us .container {
   width: 100%;
   display: -webkit-box;

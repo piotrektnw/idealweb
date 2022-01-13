@@ -54,7 +54,7 @@
 
         <!-- WHY-US START -->
 
-        <section class="bright-section why-us " id="why-us">
+        <section class="bright-section why-us " id="dlaczego-my">
 
             <div class="one info_hide">
                 <ul class="one__list one__list--one">
@@ -371,25 +371,31 @@
                         <!-- action="contact.php" method="post" not working now -->
                         <form class="contact__form" action="/mail_handler.php" method="post" id="contactForm">
                             <div class="contact__form-top">
-                                <label for="name" class="contact__form-label">Twoje imię i nazwisko: </label>
-                                <input type="text" class="contact__form-input" id="name" name="visitor_name" required>
+                                <label for="name" class="contact__form-label">* Twoje imię i nazwisko: </label>
+                                <span class="name-alert">Wprowadź swoje imię</span>
+                                <input required type="text" class="form-name contact__form-input" id="name"
+                                    name="visitor_name">
                                 <div class="contact-data">
                                     <div class="contact-data-first">
-                                        <label for="email" class="contact__form-label">Adres email: </label>
+                                        <label for="email" class="contact__form-label">* Adres email: </label>
+                                        <!-- <span class="email-alert-one">Pole wymagane</span> -->
+                                        <span class="email-alert-two">Nieprawidłowy adres email</span>
                                         <input type="text" class="contact__form-input" id="email" name="visitor_email"
                                             required>
+
+
                                     </div>
                                     <div class="contact-data-sec">
                                         <label for="phone" class="contact__form-label">Telefon kontaktowy:
                                         </label>
-                                        <input type="text" class="contact__form-input" id="phone" name="visitor_phone"
-                                            required>
+                                        <input type="number" min="0" max="9" class="contact__form-input" id="phone"
+                                            name="visitor_phone">
                                     </div>
                                 </div>
                             </div>
 
-                            <label for="msg" class="contact__form-label">Wiadomość: </label>
-
+                            <label for="msg" class="contact__form-label">* Wiadomość: </label>
+                            <span class="msg-alert">Pole wymagane</span>
                             <textarea id="msg" class="contact__form-textarea" name="visitor_msg" required></textarea>
                             <!-- </fieldset> -->
                             <button class="g-recaptcha contact__form-btn btn-special-animation"

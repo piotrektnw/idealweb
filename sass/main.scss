@@ -192,6 +192,9 @@ header {
 		@include contactForm;
 	}
 
+	
+
+
 	&__form-textarea {
 		@include contactForm;
 		max-width: 95%;
@@ -267,6 +270,21 @@ header {
 			}
 		}
 	}
+	// .email-alert-one,
+	.email-alert-two,
+	.name-alert,
+	.msg-alert {
+		margin-top: 0;
+		margin-bottom: 0;
+		font-size: 1rem;
+		color: red;
+		display: none;
+	}
+
+	.display {
+		display: inline-block;
+	}
+	
 }
 //END OF CONTACT
 
