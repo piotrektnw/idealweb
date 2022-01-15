@@ -79,7 +79,10 @@
 
 	.contact {
 		.contact-ul {
+			width: 100%;
 			flex-wrap: wrap;
+			background-color: pink;
+			
 			&__item {
 				&--one {
 					width: 100%;
@@ -87,14 +90,13 @@
 					.contact__form {
 						align-items: center;
 						justify-content: center;
-						background-color: pink;
+				
 					}
 				}
+
 				&--two {
 					width: 100%;
-					.test-div {
-						background-color: tomato;
-					}
+				
 				}
 			}
 		}

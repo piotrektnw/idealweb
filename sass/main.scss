@@ -163,130 +163,7 @@ header {
 
 //END OF HEADER
 
-// CONTACT
 
-.contact {
-	position: relative;
-	background-color: $dark-blue;
-	overflow: hidden;
-	font-size: 2rem;
-	text-transform: uppercase;
-	text-align: justify;
-
-	.title {
-		color: $pure-white;
-	}
-
-	&__form,
-	&__form-top {
-		display: flex;
-		flex-direction: column;
-	}
-
-	&__form-label {
-		margin-bottom: 0.5em;
-		text-transform: uppercase;
-	}
-
-	&__form-input {
-		@include contactForm;
-	}
-
-	
-
-
-	&__form-textarea {
-		@include contactForm;
-		max-width: 95%;
-		min-width: 95%;
-		min-height: 150px;
-	}
-
-	&__form-btn {
-		align-self: flex-start;
-		padding: 0.5em;
-		width: 100%;
-		max-width: 300px;
-		font-size: 2rem;
-		color: $dark-blue;
-		border: none;
-		border-radius: 8px;
-		background-color: $pure-white;
-		cursor: pointer;
-	}
-
-	.contact-ul {
-		display: flex;
-		align-items: start;
-		justify-content: space-evenly;
-		list-style: none;
-		width: 100%;
-
-		&__item {
-			color: white;
-
-			&--one {
-				width: 65%;
-				border-right: $orange solid 1px;
-
-				.contact-data-first {
-					margin-right: 2%;
-				}
-				.contact-data-first,
-				.contact-data-sec {
-					display: inline-block;
-					width: 46%;
-
-					label,
-					input {
-						display: block;
-						width: 100%;
-						min-width: 100%;
-					}
-				}
-			}
-
-			&--two {
-				width: 35%;
-				padding-left: 2%;
-
-				.contact-info {
-					padding-top: 5%;
-					text-transform: none;
-					padding-left: 5%;
-					line-height: 3rem;
-					font-size: 1.7rem;
-
-					.email {
-						text-transform: none;
-						line-height: 100px;
-					}
-
-					i {
-						padding: 5% 10% 0 10%;
-						font-size: 3rem;
-					}
-				}
-			}
-		}
-	}
-	// .email-alert-one,
-	.email-alert-two,
-	.name-alert,
-	.msg-alert {
-		margin-top: 0;
-		margin-bottom: 0;
-		font-size: 1rem;
-		color: red;
-		display: none;
-	}
-
-	.display {
-		display: inline-block;
-	}
-	
-}
-//END OF CONTACT
 
 // //START OF WHY-US
 
@@ -550,6 +427,146 @@ header {
 }
 
 // END OF OFFER
+
+// CONTACT
+
+.contact {
+	position: relative;
+	background-color: $dark-blue;
+	overflow: hidden;
+	font-size: 2rem;
+	text-transform: uppercase;
+	text-align: justify;
+
+	.title {
+		color: $pure-white;
+	}
+
+	
+	&__form,
+	&__form-top {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__form-label {
+		margin-bottom: 0.5em;
+		text-transform: uppercase;
+	}
+
+	&__form-input {
+		@include contactForm;
+	}
+
+	&__form-textarea {
+		@include contactForm;
+		max-width: 95%;
+		min-width: 95%;
+		min-height: 150px;
+	}
+
+	&__form-btn {
+		align-self: flex-start;
+		padding: 0.5em;
+		width: 100%;
+		max-width: 300px;
+		font-size: 2rem;
+		color: $dark-blue;
+		border: none;
+		border-radius: 8px;
+		background-color: $pure-white;
+		cursor: pointer;
+	}
+
+	.temporary-hide {
+		display: none;
+	}
+
+	.temporary-button {
+		background-color: grey;
+	}
+
+	.contact-ul {
+		display: flex;
+		align-items: start;
+		justify-content: space-evenly;
+		list-style: none;
+		width: 100%;
+
+		&__item {
+			color: white;
+
+			&--one {
+				width: 65%;
+				border-right: $orange solid 1px;
+
+				.contact-data-first {
+					margin-right: 2%;
+				}
+				.contact-data-first,
+				.contact-data-sec {
+					display: inline-block;
+					width: 46%;
+
+					label,
+					input {
+						display: block;
+						width: 100%;
+						min-width: 100%;
+					}
+				}
+			}
+
+			&--two {
+				width: 35%;
+				padding-left: 2%;
+
+				.contact-info {
+					padding-top: 5%;
+					text-transform: none;
+					padding-left: 5%;
+					line-height: 3rem;
+					font-size: 1.7rem;
+
+					.email {
+						text-transform: none;
+						line-height: 100px;
+					}
+
+					i {
+						padding: 5% 10% 0 10%;
+						font-size: 3rem;
+					}
+				}
+			}
+		}
+	}
+	// .email-alert-one,
+	.email-alert-two,
+	.name-alert,
+	.msg-alert,
+	.btn-alert {
+		margin-top: 0;
+		margin-bottom: 0;
+		font-size: 1rem;
+		color: red;
+		display: none;
+	}
+
+	.success {
+		background-color: rgb(202, 231, 193);
+	}
+
+	.failure {
+		border: 2px red solid;
+		background-color: white;
+	}
+
+	.display {
+		display: inline-block;
+	}
+}
+//END OF CONTACT
 
 //FOOTER
 .footer {

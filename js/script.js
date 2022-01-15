@@ -4,15 +4,18 @@ const date = document.querySelector('.date');
 const sections = document.querySelectorAll('.section');
 const allNavLinks = document.querySelectorAll('.nav-link, .fa-chevron-down');
 const devDescription = document.querySelector('.dev-description');
-
 const showMoreInfo = document.querySelectorAll('.show_content');
 const allContents = document.querySelectorAll('.one, .two, .thr');
 const infoHiders = document.querySelectorAll('.info_hide');
-const contactForm = document.querySelector('.contact__form');
+const contactForm = document.querySelector('#contactForm');
 const nameAlert = document.querySelector('.name-alert');
 const emailAlertTwo = document.querySelector('.email-alert-two');
 const msgAlert = document.querySelector('.msg-alert');
-
+const btnAlert =document.querySelector('.btn-alert');
+const usernameInput = document.querySelector('#name');
+const userEmailInput = document.querySelector('#email');
+const userMsgInput = document.querySelector('#msg');
+const tempFormSendBtn = document.querySelector('.temporary-button');
 const formSendBtn = document.querySelector('.contact__form-btn');
 
 const hide = () => {
@@ -21,39 +24,66 @@ const hide = () => {
     })
 }
 
-const formChecker = () => {
-    const mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    const formData = Object.fromEntries(new FormData(contactForm).entries());
-    
-    if(formData.visitor_name.length <= 0) {
-        nameAlert.classList.add('display')
-        setTimeout(function () {
-            nameAlert.classList.remove('display')
-        }, 2000)
-    // } else if (formData.visitor_email.length <= 0) {
-    //     emailAlertOne.style.display = "inline-block"
-    } else if (formData.visitor_msg.length <= 0) {
-        msgAlert.classList.add('display')
-        setTimeout(function () {
-            msgAlert.classList.remove('display')
-        }, 2000)
-    } else if (formData.visitor_msg.length >= 1000) {
-        console.log("msg too long");
-    }
-
-    if (!formData.visitor_email.match(mailformat)) {
-    emailAlertTwo.classList.add('display')
-    setTimeout(function () {
-        emailAlertTwo.classList.remove('display')
-    }, 2000)
-  }
-
-
-
-    console.log(formData);
+const formBtnInfo = () => {
+    btnAlert.classList.add('display')
 }
 
-const showContent = (e) => {
+const validateUsername = () => {
+    let valid = false;
+    const min = 3,
+        max = 25;
+    const username = usernameInput.value.trim();
+
+     if (username.length <= min || username.length > max ) {
+        nameAlert.classList.add('display')
+        usernameInput.classList.add('failure')
+    } else {
+        console.log("good");
+        nameAlert.classList.remove('display')
+        usernameInput.classList.remove('failure')
+        usernameInput.classList.add('success')
+        
+        valid = true;   
+    }
+    return valid;
+}
+
+const validateEmail = () => {
+
+    let valid = false;
+    const mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    const email = userEmailInput.value.trim();
+
+    if (!email.match(mailformat)) {
+        emailAlertTwo.classList.add('display')
+        userEmailInput.classList.add('failure')
+    } else {
+        emailAlertTwo.classList.remove('display');
+        userEmailInput.classList.remove('failure')
+        userEmailInput.classList.add('success')
+        valid = true;
+    }
+
+    return valid
+}
+
+const validateMessage = () => {
+    let valid = false;
+    const msg = userMsgInput.value.trim();
+
+    if (msg.length <= 3) {
+        msgAlert.classList.add('display')
+        userMsgInput.classList.add('failure')
+    } else {
+        msgAlert.classList.remove('display');
+        userMsgInput.classList.remove('failure')
+        userMsgInput.classList.add('success')
+        valid = true;
+    }
+    return valid
+}
+
+const whyUsDetailsDisplayer = (e) => {
     let text = e.target.textContent;
     let toDisplay = "." + text.slice(0, 3);
 
@@ -62,11 +92,8 @@ const showContent = (e) => {
     displayContent.classList.add("show")
 }
 
-
 const navBg = () => {
-
     this.scrollY > 100 ? nav.style.opacity = "1" : ""
-
 }
 
 const hideNav = () => {
@@ -102,9 +129,7 @@ let i = 0;
 function updateDevDescription() {
 
     let adjectives = ['zarabiają', 'zwiększają ruch', 'interesują', 'przyciągają']
-
-
-
+    
     setTimeout(function () {
         devDescription.textContent = adjectives[i];
         i++;
@@ -112,7 +137,6 @@ function updateDevDescription() {
         if (i < adjectives.length) {
             updateDevDescription();
         }
-
     }, 600)
 }
 
@@ -131,17 +155,39 @@ setTimeout(() => {
     updateDevDescription();
 }, 2500);
 
-// form validation 
-formSendBtn.addEventListener('click', formChecker)
+
+// form validation
+contactForm.addEventListener('input', function (e) {
+    switch (e.target.id) {
+        case "name":
+            validateUsername();
+            break;
+        case "email": 
+            validateEmail();
+            break;
+        case "msg":
+            validateMessage();
+            break;
+        }
+
+        if(validateUsername() && validateEmail() && validateMessage()) {
+            formSendBtn.classList.remove('temporary-hide')
+            tempFormSendBtn.classList.add('temporary-hide')
+            btnAlert.classList.remove('display')
+        }
+})
+
+tempFormSendBtn.addEventListener('click', formBtnInfo)
+
 
 //handle why-us content
 showMoreInfo.forEach((button) => {
-    button.addEventListener('click', showContent)
+    button.addEventListener('click', whyUsDetailsDisplayer)
 })
 
 infoHiders.forEach(item => {
     item.addEventListener('click', hide)
 });
 
-// current year in footer ,
+// current year in footer
 currentDate();

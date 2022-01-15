@@ -54,7 +54,7 @@
 
         <!-- WHY-US START -->
 
-        <section class="bright-section why-us " id="dlaczego-my">
+        <section class="bright-section why-us" id="dlaczego-my">
 
             <div class="one info_hide">
                 <ul class="one__list one__list--one">
@@ -363,18 +363,15 @@
 
             <h2 class="title"><span class="highlight">Napisz</span> do nas!</h2>
             <div class="wrapper">
-
                 <ul class="contact-ul">
-
                     <li class="contact-ul__item contact-ul__item--one">
-                        <!-- <fieldset disabled="disabled"> -->
-                        <!-- action="contact.php" method="post" not working now -->
                         <form class="contact__form" action="/mail_handler.php" method="post" id="contactForm">
                             <div class="contact__form-top">
                                 <label for="name" class="contact__form-label">* Twoje imię i nazwisko: </label>
-                                <span class="name-alert">Wprowadź swoje imię</span>
+                                <span class="name-alert">Wprowadzone dane muszą być dłuższe niż 3 i krótsze niż 25
+                                    znaków</span>
                                 <input required type="text" class="form-name contact__form-input" id="name"
-                                    name="visitor_name">
+                                    name="visitor_name" autocomplete="off">
                                 <div class="contact-data">
                                     <div class="contact-data-first">
                                         <label for="email" class="contact__form-label">* Adres email: </label>
@@ -395,15 +392,14 @@
                             </div>
 
                             <label for="msg" class="contact__form-label">* Wiadomość: </label>
-                            <span class="msg-alert">Pole wymagane</span>
+                            <span class="msg-alert">Wpisz wiadomość</span>
                             <textarea id="msg" class="contact__form-textarea" name="visitor_msg" required></textarea>
-                            <!-- </fieldset> -->
-                            <button class="g-recaptcha contact__form-btn btn-special-animation"
+                            <button disabled class="g-recaptcha contact__form-btn temporary-hide"
                                 data-sitekey="6LesjQgeAAAAAMJE9KvX9rkCdoNG8vmR0wh7cqpO" data-callback='onSubmit'
                                 data-action='submit'>Wyślij</button>
+                            <button class="temporary-button contact__form-btn">Wyślij</button>
+                            <span class="btn-alert">Wypełnij formularz</span>
                         </form>
-
-
                     </li>
 
                     <li class="contact-ul__item contact-ul__item--two">
@@ -419,7 +415,6 @@
                         </div>
                     </li>
                 </ul>
-
             </div>
         </section>
 
@@ -431,7 +426,6 @@
                         <div class="title">
                             <p>O nas:</p>
                         </div>
-                        <!-- <div class="profile-picture"></div> -->
                         <div class="description">
                             <h3>Idealweb.pl - tworzenie nowoczesnych stron internetowych.
                             </h3>
@@ -464,8 +458,8 @@
                 <p>&copy Idealweb.pl <span class="date"></span></p>
             </div>
         </section>
-    </main>
 
+    </main>
 
     <!-- Source of animations for 'timeline' section -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
