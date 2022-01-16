@@ -547,7 +547,64 @@ header .fa-chevron-down {
   color: #fff;
 }
 
-.contact__form, .contact__form-top {
+.contact .test-container {
+  padding: 0 10px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #fff;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.contact .test-container .contact__form {
+  padding: 1.1em;
+  text-align: left;
+  -webkit-box-flex: 1.8;
+      -ms-flex-positive: 1.8;
+          flex-grow: 1.8;
+  min-width: 512px;
+  border-right: #fca311 solid 1px;
+}
+
+.contact .test-container .contact__form--input, .contact .test-container .contact__form--textarea {
+  margin-bottom: 2em;
+  padding: 0.6em 1.2em;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.6rem;
+  width: 100%;
+}
+
+.contact .test-container .contact__form--textarea {
+  max-width: 100%;
+  min-width: 100%;
+  min-height: 150px;
+}
+
+.contact .test-container .contact__form--label {
+  display: block;
+  width: 100%;
+  margin-bottom: 0.2em;
+  text-transform: uppercase;
+}
+
+.contact .test-container .contact__form--phone {
+  width: 100%;
+}
+
+.contact .test-container .contact__form--email {
+  width: 100%;
+}
+
+.contact .test-container .contact__form__form, .contact .test-container .contact__form__form-top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -557,30 +614,43 @@ header .fa-chevron-down {
           flex-direction: column;
 }
 
-.contact__form-label {
-  margin-bottom: 0.5em;
-  text-transform: uppercase;
+.contact .test-container .contact__form .contact-data {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  min-width: 256px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-.contact__form-input {
-  margin-bottom: 2em;
-  padding: 0.6em 1.2em;
-  border: none;
-  border-radius: 8px;
-  font-size: 1.6rem;
-  width: 95%;
+.contact .test-container .contact__form .contact-data .contact-data-first,
+.contact .test-container .contact__form .contact-data .contact-data-sec {
+  width: 49%;
+  min-width: 244px;
 }
 
-.contact__form-textarea {
-  margin-bottom: 2em;
-  padding: 0.6em 1.2em;
-  border: none;
-  border-radius: 8px;
-  font-size: 1.6rem;
-  width: 95%;
-  max-width: 95%;
-  min-width: 95%;
-  min-height: 150px;
+.contact .test-container .contact__form .contact-data .contact-data-first {
+  margin-right: 2%;
+}
+
+.contact .contact-info {
+  text-transform: none;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  min-width: 400px;
+  text-align: center;
+  width: 30%;
+  padding: 1.1em;
+  line-height: 2em;
+}
+
+.contact .contact-info .detailed-info {
+  text-align: center;
+  width: 100%;
 }
 
 .contact__form-btn {
@@ -605,71 +675,6 @@ header .fa-chevron-down {
   background-color: grey;
 }
 
-.contact .contact-ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: start;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  list-style: none;
-  width: 100%;
-}
-
-.contact .contact-ul__item {
-  color: white;
-}
-
-.contact .contact-ul__item--one {
-  width: 65%;
-  border-right: #fca311 solid 1px;
-}
-
-.contact .contact-ul__item--one .contact-data-first {
-  margin-right: 2%;
-}
-
-.contact .contact-ul__item--one .contact-data-first,
-.contact .contact-ul__item--one .contact-data-sec {
-  display: inline-block;
-  width: 46%;
-}
-
-.contact .contact-ul__item--one .contact-data-first label,
-.contact .contact-ul__item--one .contact-data-first input,
-.contact .contact-ul__item--one .contact-data-sec label,
-.contact .contact-ul__item--one .contact-data-sec input {
-  display: block;
-  width: 100%;
-  min-width: 100%;
-}
-
-.contact .contact-ul__item--two {
-  width: 35%;
-  padding-left: 2%;
-}
-
-.contact .contact-ul__item--two .contact-info {
-  padding-top: 5%;
-  text-transform: none;
-  padding-left: 5%;
-  line-height: 3rem;
-  font-size: 1.7rem;
-}
-
-.contact .contact-ul__item--two .contact-info .email {
-  text-transform: none;
-  line-height: 100px;
-}
-
-.contact .contact-ul__item--two .contact-info i {
-  padding: 5% 10% 0 10%;
-  font-size: 3rem;
-}
-
 .contact .email-alert-two,
 .contact .name-alert,
 .contact .msg-alert,
@@ -677,8 +682,8 @@ header .fa-chevron-down {
   margin-top: 0;
   margin-bottom: 0;
   font-size: 1rem;
-  color: red;
   display: none;
+  color: red;
 }
 
 .contact .success {
@@ -687,7 +692,6 @@ header .fa-chevron-down {
 
 .contact .failure {
   border: 2px red solid;
-  background-color: white;
 }
 
 .contact .display {
@@ -971,6 +975,16 @@ header .fa-chevron-down {
             align-items: start;
     opacity: 1;
   }
+  .contact .test-container .contact__form {
+    border-right: none;
+  }
+  .contact .test-container .contact-info {
+    padding: 1.1em;
+    line-height: 2em;
+  }
+  .contact .test-container .contact-info i {
+    padding: 1em 0;
+  }
   .why-us .container .child-1,
   .why-us .container .child-2,
   .why-us .container .child-3,
@@ -1009,26 +1023,6 @@ header .fa-chevron-down {
     margin: 0 auto;
     width: 300px;
     padding: 0;
-  }
-  .contact .contact-ul {
-    width: 100%;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    background-color: pink;
-  }
-  .contact .contact-ul__item--one {
-    width: 100%;
-  }
-  .contact .contact-ul__item--one .contact__form {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .contact .contact-ul__item--two {
-    width: 100%;
   }
 }
 

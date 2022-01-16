@@ -18,6 +18,26 @@
 		align-items: start;
 		opacity: 1;
 	}
+	.contact {
+		.test-container {
+			.contact__form {
+				border-right: none;
+			}
+
+			.contact-info {
+				padding: 1.1em;
+				line-height: 2em;
+
+				i {
+					padding: 1em 0;
+				}
+			}
+		}
+		// .contact__form-btn {
+		// 	margin-left: 50%;
+		// 	transform: translatex(-50%);
+		// }
+	}
 
 	.why-us {
 		.container {
@@ -72,31 +92,6 @@
 					margin: 0 auto;
 					width: 300px;
 					padding: 0;
-				}
-			}
-		}
-	}
-
-	.contact {
-		.contact-ul {
-			width: 100%;
-			flex-wrap: wrap;
-			background-color: pink;
-			
-			&__item {
-				&--one {
-					width: 100%;
-
-					.contact__form {
-						align-items: center;
-						justify-content: center;
-				
-					}
-				}
-
-				&--two {
-					width: 100%;
-				
 				}
 			}
 		}

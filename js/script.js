@@ -38,7 +38,6 @@ const validateUsername = () => {
         nameAlert.classList.add('display')
         usernameInput.classList.add('failure')
     } else {
-        console.log("good");
         nameAlert.classList.remove('display')
         usernameInput.classList.remove('failure')
         usernameInput.classList.add('success')
@@ -139,7 +138,6 @@ function updateDevDescription() {
         }
     }, 600)
 }
-
 
 //handle navbar functions
 menuBtn.addEventListener('click', handleNav);

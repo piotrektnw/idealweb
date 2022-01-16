@@ -163,8 +163,6 @@ header {
 
 //END OF HEADER
 
-
-
 // //START OF WHY-US
 
 .why-us {
@@ -442,27 +440,85 @@ header {
 		color: $pure-white;
 	}
 
-	
-	&__form,
-	&__form-top {
+	.test-container {
+		padding: 0 10px;
+		width: 100%;
 		display: flex;
-		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		color: $pure-white;
+		flex-wrap: wrap;
+
+		.contact__form {
+			padding: 1.1em;
+			text-align: left;
+			flex-grow: 1.8;
+			min-width: 512px;
+			border-right: $orange solid 1px;
+
+			&--input,
+			&--textarea {
+				@include contactForm;
+			}
+
+			&--textarea {
+				max-width: 100%;
+				min-width: 100%;
+				min-height: 150px;
+			}
+
+			&--label {
+				display: block;
+				width: 100%;
+				margin-bottom: 0.2em;
+				text-transform: uppercase;
+			}
+
+			&--phone {
+				width: 100%;
+			}
+
+			&--email {
+				width: 100%;
+			}
+
+			&__form,
+			&__form-top {
+				display: flex;
+				flex-direction: column;
+			}
+
+			.contact-data {
+				flex-grow: 1;
+				min-width: 256px;
+				display: flex;
+				flex-wrap: wrap;
+
+				.contact-data-first,
+				.contact-data-sec {
+					width: 49%;
+					min-width: 244px;
+				}
+				.contact-data-first {
+					margin-right: 2%;
+				}
+			}
+		}
 	}
 
-	&__form-label {
-		margin-bottom: 0.5em;
-		text-transform: uppercase;
-	}
+	.contact-info {
+		text-transform: none;
+		flex-grow: 1;
+		min-width: 400px;
+		text-align: center;
+		width: 30%;
+		padding: 1.1em;
+		line-height: 2em;
 
-	&__form-input {
-		@include contactForm;
-	}
-
-	&__form-textarea {
-		@include contactForm;
-		max-width: 95%;
-		min-width: 95%;
-		min-height: 150px;
+		.detailed-info {
+			text-align: center;
+			width: 100%;
+		}
 	}
 
 	&__form-btn {
@@ -486,61 +542,6 @@ header {
 		background-color: grey;
 	}
 
-	.contact-ul {
-		display: flex;
-		align-items: start;
-		justify-content: space-evenly;
-		list-style: none;
-		width: 100%;
-
-		&__item {
-			color: white;
-
-			&--one {
-				width: 65%;
-				border-right: $orange solid 1px;
-
-				.contact-data-first {
-					margin-right: 2%;
-				}
-				.contact-data-first,
-				.contact-data-sec {
-					display: inline-block;
-					width: 46%;
-
-					label,
-					input {
-						display: block;
-						width: 100%;
-						min-width: 100%;
-					}
-				}
-			}
-
-			&--two {
-				width: 35%;
-				padding-left: 2%;
-
-				.contact-info {
-					padding-top: 5%;
-					text-transform: none;
-					padding-left: 5%;
-					line-height: 3rem;
-					font-size: 1.7rem;
-
-					.email {
-						text-transform: none;
-						line-height: 100px;
-					}
-
-					i {
-						padding: 5% 10% 0 10%;
-						font-size: 3rem;
-					}
-				}
-			}
-		}
-	}
 	// .email-alert-one,
 	.email-alert-two,
 	.name-alert,
@@ -549,8 +550,8 @@ header {
 		margin-top: 0;
 		margin-bottom: 0;
 		font-size: 1rem;
-		color: red;
 		display: none;
+		color: red;
 	}
 
 	.success {
@@ -559,13 +560,13 @@ header {
 
 	.failure {
 		border: 2px red solid;
-		background-color: white;
 	}
 
 	.display {
 		display: inline-block;
 	}
 }
+
 //END OF CONTACT
 
 //FOOTER
