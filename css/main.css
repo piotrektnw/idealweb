@@ -143,7 +143,7 @@ header .hero-img {
   position: relative;
   height: 100vh;
   width: 100vw;
-  background-image: url("../img/business_big.jpg");
+  background-image: url("../img/business_big.webp");
   background-position: bottom;
   background-size: cover;
   background-attachment: fixed;
@@ -200,15 +200,15 @@ header .fa-chevron-down {
 }
 
 .why-us .container .child-1 {
-  background-image: url("/img/project_big.jpg");
+  background-image: url("/img/project_big.webp");
 }
 
 .why-us .container .child-2 {
-  background-image: url("/img/waterfall_big.jpg");
+  background-image: url("/img/waterfall_big.webp");
 }
 
 .why-us .container .child-3 {
-  background-image: url("/img/mountain.jpg");
+  background-image: url("/img/mountain.webp");
 }
 
 .why-us .container .child-1,
@@ -1028,7 +1028,7 @@ header .fa-chevron-down {
 
 @media (min-width: 769px) {
   header .hero-img {
-    background-image: url("../img/business_big.jpg");
+    background-image: url("../img/business_big.webp");
   }
 }
 
