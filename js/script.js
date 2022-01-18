@@ -34,7 +34,7 @@ const validateUsername = () => {
         max = 25;
     const username = usernameInput.value.trim();
 
-     if (username.length <= min || username.length > max ) {
+    if (username.length <= min || username.length > max ) {
         nameAlert.classList.add('display')
         usernameInput.classList.add('failure')
     } else {
@@ -153,6 +153,9 @@ setTimeout(() => {
     updateDevDescription();
 }, 2500);
 
+const changeColor = () => {
+    formSendBtn.style.backgroundColor = "yellow"
+}
 
 // form validation
 contactForm.addEventListener('input', function (e) {
@@ -176,7 +179,6 @@ contactForm.addEventListener('input', function (e) {
 })
 
 tempFormSendBtn.addEventListener('click', formBtnInfo)
-
 
 //handle why-us content
 showMoreInfo.forEach((button) => {

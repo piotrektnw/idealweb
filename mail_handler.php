@@ -11,10 +11,12 @@ $headers = array(
 );
 
 if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    echo("$email is a valid email address");
+    echo("Twoja wiadomość została wysłana. Dziękujemy. Za chwilę zostaniesz przeniesiony na stronę główną.");
     mail($to, $subject, $message, $headers);
+    header('Location: /#kontakt');
   } else {
-    echo("$email is not a valid email address");
+    echo("Sprawdź adres email wprowadzony do formularza. Za chwilę zostaniesz przeniesiony na stronę główną. ");
+  
   }
 
 ?>
