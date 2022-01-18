@@ -200,15 +200,15 @@ header .fa-chevron-down {
 }
 
 .why-us .container .child-1 {
-  background-image: url("/img/sq.jpg");
-}
-
-.why-us .container .child-2 {
   background-image: url("/img/project_big.jpg");
 }
 
-.why-us .container .child-3 {
+.why-us .container .child-2 {
   background-image: url("/img/waterfall_big.jpg");
+}
+
+.why-us .container .child-3 {
+  background-image: url("/img/mountain.jpg");
 }
 
 .why-us .container .child-1,
@@ -233,7 +233,7 @@ header .fa-chevron-down {
 .why-us .container .child-3__hider {
   background-color: black;
   width: 100%;
-  opacity: 0.7;
+  opacity: 0.5;
   height: 100%;
   -webkit-transition: 0.6s opacity, 0.6s -webkit-transform;
   transition: 0.6s opacity, 0.6s -webkit-transform;
