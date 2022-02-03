@@ -18,8 +18,6 @@
     <link rel="icon" type="image/x-icon" href="./img/favicon_1.ico">
 </head>
 
-// redirection after send mail.php
-
 <body>
     <main>
         <header id="home" class="section dark-section">
@@ -362,55 +360,58 @@
         </section>
 
         <section id="kontakt" class="section contact dark-section padding-bottom">
+            <div class="wrapper">
+
+                <h2 class="title"><span class="highlight">Napisz</span> do nas!</h2>
+
+                <div class="test-container">
+                    <form class="contact__form" action="/mail_handler.php" method="post" id="contactForm">
+                        <div class="contact__form-top">
+                            <label for="name" class="contact__form--label">* Twoje imię i nazwisko: </label>
+                            <span class="name-alert">Wprowadzone dane muszą być dłuższe niż 3 i krótsze niż 25
+                                znaków</span>
+                            <input required type="text" class="form-name contact__form--input" id="name"
+                                name="visitor_name" autocomplete="off">
+                            <div class="contact-data">
+                                <div class="contact-data-first">
+                                    <label for="email" class="contact__form--label">* Adres email: </label>
+                                    <!-- <span class="email-alert-one">Pole wymagane</span> -->
+                                    <span class="email-alert-two">Nieprawidłowy adres email</span>
+                                    <input type="text" class="contact__form--input contact__form--email" id="email"
+                                        name="visitor_email" required>
 
 
-            <h2 class="title"><span class="highlight">Napisz</span> do nas!</h2>
-
-            <div class="test-container">
-                <form class="contact__form" action="/mail_handler.php" method="post" id="contactForm">
-                    <div class="contact__form-top">
-                        <label for="name" class="contact__form--label">* Twoje imię i nazwisko: </label>
-                        <span class="name-alert">Wprowadzone dane muszą być dłuższe niż 3 i krótsze niż 25
-                            znaków</span>
-                        <input required type="text" class="form-name contact__form--input" id="name" name="visitor_name"
-                            autocomplete="off">
-                        <div class="contact-data">
-                            <div class="contact-data-first">
-                                <label for="email" class="contact__form--label">* Adres email: </label>
-                                <!-- <span class="email-alert-one">Pole wymagane</span> -->
-                                <span class="email-alert-two">Nieprawidłowy adres email</span>
-                                <input type="text" class="contact__form--input contact__form--email" id="email"
-                                    name="visitor_email" required>
-
-
-                            </div>
-                            <div class="contact-data-sec">
-                                <label for="phone" class="contact__form--label">Telefon kontaktowy:
-                                </label>
-                                <input type="number" min="0" max="9" class="contact__form--input contact__form--phone"
-                                    id="phone" name="visitor_phone">
+                                </div>
+                                <div class="contact-data-sec">
+                                    <label for="phone" class="contact__form--label">Telefon kontaktowy:
+                                    </label>
+                                    <input type="number" min="0" max="9"
+                                        class="contact__form--input contact__form--phone" id="phone"
+                                        name="visitor_phone">
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <label for="msg" class="contact__form--label">* Wiadomość: </label>
-                    <span class="msg-alert">Wpisz wiadomość</span>
-                    <textarea id="msg" class="contact__form--textarea" name="visitor_msg" required></textarea>
-                    <button disabled class="g-recaptcha contact__form-btn temporary-hide"
-                        data-sitekey="6LesjQgeAAAAAMJE9KvX9rkCdoNG8vmR0wh7cqpO" data-callback='onSubmit'
-                        data-action='submit'>Wyślij</button>
-                    <button class="temporary-button contact__form-btn">Wyślij</button>
-                    <span class="btn-alert">Wypełnij formularz</span>
-                </form>
-                <div class="contact-info">
-                    <p class="detailed-info">
-                        Chcesz stworzyć stronę internetową dla swojego biznesu? Zastanawiasz się jakie
-                        korzyści
-                        przyniesie Ci profesjonalna strona internetowa? Zadzwoń lub napisz do nas! Bardzo
-                        chętnie odpowiemy na Twoje pytania!
-                    </p>
-                    <p class="email"> <i class="far fa-envelope"></i> biuro [ a t ] idealweb.pl </p>
-                    <p> <i class="fas fa-phone-alt"></i> +48 664 063 929 </p>
+                        <label for="msg" class="contact__form--label">* Wiadomość: </label>
+                        <span class="msg-alert">Wpisz wiadomość</span>
+                        <textarea id="msg" class="contact__form--textarea" name="visitor_msg" required></textarea>
+                        <button disabled class="g-recaptcha contact__form-btn temporary-hide"
+                            data-sitekey="6LesjQgeAAAAAMJE9KvX9rkCdoNG8vmR0wh7cqpO" data-callback='onSubmit'
+                            data-action='submit'>Wyślij</button>
+                        <button class="temporary-button contact__form-btn">Wyślij</button>
+                        <span class="btn-alert">Wypełnij formularz</span>
+                    </form>
+                    <div class="contact-info">
+                        <p class="detailed-info">
+                            Chcesz stworzyć stronę internetową dla swojego biznesu? Zastanawiasz się jakie
+                            korzyści
+                            przyniesie Ci profesjonalna strona internetowa? Zadzwoń lub napisz do nas! Bardzo
+                            chętnie odpowiemy na Twoje pytania!
+                        </p>
+                        <p class="email"> <i class="far fa-envelope"></i><a href="mailto:biuro@idealweb.pl"> biuro [ a t
+                                ] idealweb.pl </a> </p>
+                        <p> <i class="fas fa-phone-alt"></i> +48 664 063 929 </p>
+                    </div>
                 </div>
             </div>
         </section>

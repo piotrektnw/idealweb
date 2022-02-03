@@ -27,7 +27,7 @@ body {
 .title {
   font-size: 4rem;
   color: #14213d;
-  padding: 20px;
+  padding: 2em 0;
   text-align: center;
   text-transform: uppercase;
 }
@@ -49,11 +49,11 @@ body {
   display: -ms-flexbox;
   display: flex;
   position: fixed;
-  top: 10px;
-  right: 20px;
+  top: 0.6em;
+  right: 1.4em;
   color: #fff;
   background: none;
-  font-size: 2rem;
+  font-size: 3rem;
   border: none;
   z-index: 10;
   cursor: pointer;
@@ -75,9 +75,9 @@ body {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: end;
-  padding-right: 5rem;
+  padding-right: 10em;
   position: fixed;
-  height: 4rem;
+  height: 6em;
   width: 100vw;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
@@ -97,7 +97,7 @@ body {
 
 .nav-link {
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 2.2rem;
   padding: 0 3rem;
   color: #fca311;
   -webkit-transition: 0.3s font-size, 0.3s color;
@@ -143,7 +143,7 @@ header .hero-img {
   position: relative;
   height: 100vh;
   width: 100vw;
-  background-image: url("../img/business_big.webp");
+  background-image: url("/img/business_big.webp");
   background-position: bottom;
   background-size: cover;
   background-attachment: fixed;
@@ -600,6 +600,13 @@ header .fa-chevron-down {
   width: 100%;
 }
 
+.contact .test-container .contact__form a {
+  text-decoration: none;
+  color: white;
+  -webkit-transition: 0.3s font-size, 0.3s color;
+  transition: 0.3s font-size, 0.3s color;
+}
+
 .contact .test-container .contact__form--email {
   width: 100%;
 }
@@ -646,6 +653,13 @@ header .fa-chevron-down {
   width: 30%;
   padding: 1.1em;
   line-height: 2em;
+}
+
+.contact .contact-info a {
+  text-decoration: none;
+  color: white;
+  -webkit-transition: 0.3s font-size, 0.3s color;
+  transition: 0.3s font-size, 0.3s color;
 }
 
 .contact .contact-info .detailed-info {
@@ -959,7 +973,7 @@ header .fa-chevron-down {
     font-size: 3rem;
   }
   header .hero-img {
-    background-image: url("/img/business_sm.jpg");
+    background-image: url("/img/business_sm.webp");
   }
   .nav {
     height: 200px;
@@ -1023,12 +1037,6 @@ header .fa-chevron-down {
     margin: 0 auto;
     width: 300px;
     padding: 0;
-  }
-}
-
-@media (min-width: 769px) {
-  header .hero-img {
-    background-image: url("../img/business_big.webp");
   }
 }
 

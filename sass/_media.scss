@@ -7,7 +7,7 @@
 			font-size: 3rem;
 		}
 		.hero-img {
-			background-image: url('/img/business_sm.jpg');
+			background-image: url('/img/business_sm.webp');
 		}
 	}
 
@@ -94,14 +94,6 @@
 					padding: 0;
 				}
 			}
-		}
-	}
-}
-
-@media (min-width: 769px) {
-	header {
-		.hero-img {
-			background-image: url('../img/business_big.webp');
 		}
 	}
 }
